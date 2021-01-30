@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import Location from './components/Location'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
+
+
 
 import axios from 'axios'
 
@@ -67,7 +72,11 @@ class App extends React.Component {
   render = () => {
     return (
     <div>
+      <Navbar 
+      // navbar={navbar}
+      />
       <h1>Hello World</h1>
+      <Footer />
     
     
     {this.state.locations.map((location) => {
