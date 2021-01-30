@@ -12,7 +12,7 @@ class Location extends Component {
                 <img className="img1" src={this.state.img1} alt="images" />
                 <img className="img1" src={this.state.img2} alt="images" />
                 <img className="img1" src={this.state.img3} alt="images" />
-                <p>Description: {locations.description}</p>
+                <p>Description: {this.props.locations.description}</p>
 
                 <detials>
                     <summary>Edit Person</summary>
