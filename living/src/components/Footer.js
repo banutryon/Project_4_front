@@ -12,7 +12,11 @@ class Footer extends Component {
                     <li className='feedback'>Provide Feedback</li>
                     <li className='social'>LinkedIn</li>
                 </ul>
+<<<<<<< HEAD
                 <div className='userstory'>
+=======
+                <div>
+>>>>>>> 4c33ed0e1a0f18e413581518ad4333924f266c6a
                     <p>Information about our User story, what makes use diffrent, our mission and a little bit about what inspired us.</p>
                 </div>
             </div>
