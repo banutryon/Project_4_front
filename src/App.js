@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 
 import axios from 'axios'
 
-class App extends React.Component {
+class App extends Component {
   state = {
     name: '',
     street: '',
@@ -36,7 +36,8 @@ class App extends React.Component {
   }
 // ===========DELETE ==================
   deleteLocation = (event) => {
-    axios.delete('/locations/' + event.target.value).then((response) => {
+    let id = parseInt(event.target.value)
+    axios.delete('/locations/' + id).then((response) => {
       this.getLocations()
 
     })
@@ -46,7 +47,7 @@ class App extends React.Component {
   updateLocation = (event) => {
     event.preventDefault()
     const id = event.target.id
-    axios.put('/people/' + id, this.state).then((response) => {
+    axios.put('/locations/' + id, this.state).then((response) => {
       this.getLocations()
     })
   }
@@ -81,7 +82,7 @@ class App extends React.Component {
     
     {this.state.locations.map((location) => {
       return <Location key={location.id} 
-      location={location}
+      locations={location}
       updateLocation={this.updateLocation}
       deleteLocation={this.deleteLocation}
       handleChange={this.handleChange}

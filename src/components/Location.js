@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Location extends Component {
     render = () => {
         return (
-            <div ClassName="locations">
+            <div className="locations">
                 <h4>Name: {this.props.locations.name}</h4>
                 <h5>Street: {this.props.locations.street}</h5>
                 <h5>City: {this.props.locations.city}</h5>
@@ -15,9 +15,9 @@ class Location extends Component {
                 <p>Description: {this.props.locations.description}</p>
 
                 <detials>
-                    <summary>Edit Person</summary>
-                    <form id={this.props.location.id}
-                    onSubmit={this.props.person.id}>
+                    <summary>Edit Location</summary>
+                    <form id={this.props.locations.id}
+                    onSubmit={this.props.locations.id}>
                     <label htmlFor="name">Name</label>
                     <br />
                     <input type="text" id="name" 
@@ -62,7 +62,7 @@ class Location extends Component {
 
                     </form>
                 </detials>
-                <button value={this.props.location.id} 
+                <button value={this.props.locations.id} 
                 onClick={this.props.deleteLocation}>Delete</button>
             </div>
 
