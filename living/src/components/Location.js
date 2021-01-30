@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-
+ 
 class Location extends Component {
     render = () => {
         return (
             <div ClassName="locations">
+                
                 <h4>Name: {this.props.locations.name}</h4>
                 <h5>Street: {this.props.locations.street}</h5>
                 <h5>City: {this.props.locations.city}</h5>
