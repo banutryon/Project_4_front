@@ -30,14 +30,14 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    axios.post('/locations', this.state).then((response) => {
+    axios.post('https://altliving.herokuapp.com/locations/', this.state).then((response) => {
       this.getLocations()
     })
   }
 // ===========DELETE ==================
   deleteLocation = (event) => {
     let id = parseInt(event.target.value)
-    axios.delete('/locations/' + id).then((response) => {
+    axios.delete('https://altliving.herokuapp.com/locations/' + id).then((response) => {
       this.getLocations()
 
     })
@@ -46,16 +46,18 @@ class App extends Component {
 
   updateLocation = (event) => {
     event.preventDefault()
-    const id = event.target.id
-    axios.put('/locations/' + id, this.state).then((response) => {
-      this.getLocations()
+    let id = parseInt(event.target.id)
+    axios
+      .put('https://altliving.herokuapp.com/locations/' + id, this.state)
+      .then((response) => {
+        this.getLocations()
     })
   }
 // ===========GET ==================
 
   getLocations = () => {
     axios
-    .get('/locations')
+    .get('https://altliving.herokuapp.com/locations/')
     .then(
       (response) => this.setState({ locations: response.data }),
       (err) => console.error(err) 
@@ -82,10 +84,11 @@ class App extends Component {
     
     {this.state.locations.map((location) => {
       return <Location key={location.id} 
-      locations={location}
+      location={location}
       updateLocation={this.updateLocation}
       deleteLocation={this.deleteLocation}
       handleChange={this.handleChange}
+      // handleSubmit={this.handleSubmit}
        />
     })}
     </div>
