@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Location from './components/Location'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Map from './components/Map'
 
 
 
@@ -78,9 +79,9 @@ class App extends Component {
       <Navbar 
       // navbar={navbar}
       />
-      <h1>Hello World</h1>
-      <Footer />
-    
+      {/* <h1>Hello World</h1> */}
+      
+      <Map />
     
     {this.state.locations.map((location) => {
       return <Location key={location.id} 
@@ -91,6 +92,11 @@ class App extends Component {
       // handleSubmit={this.handleSubmit}
        />
     })}
+
+
+    
+
+    <Footer />
     </div>
     )
   }
