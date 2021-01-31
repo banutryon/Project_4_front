@@ -81,7 +81,7 @@ class App extends Component {
     return (
     <div>
       <Navbar 
-      location={location}
+      state={this.state}
       handleSubmit={this.handleSubmit}
       />
       {/* <h1>Hello World</h1> */}
