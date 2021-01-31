@@ -6,7 +6,7 @@ import mapStyles from '../mapStyles'
 const libraries = ["places"]
 
 const mapContainerStyle = {
-    width: "50vw",
+    width: "40vw",
     height: "50vh"
 }
 
@@ -38,7 +38,7 @@ export const Map = () => {
 
 
     return (
-        <div>
+        <div className="map">
             <GoogleMap
                 mapContainerStyle={mapContainerStyle}
                 zoom={8}
