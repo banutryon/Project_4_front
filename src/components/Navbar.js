@@ -96,6 +96,13 @@ class Navbar extends Component {
                                  value={this.props.state.description} />  
                                  <br />
 
+                                 <button
+                                  className="createButton"
+                                 value={this.props.state.id} 
+                                 onClick={this.props.handleChange}>
+                                Create 
+                               </button>
+
                         </details>
                     </li>   
                 </ul>
