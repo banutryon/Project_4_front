@@ -81,6 +81,7 @@ class App extends Component {
     return (
     <div>
       <Navbar 
+      state={this.state}
       
       handleSubmit={this.handleSubmit}
       />
