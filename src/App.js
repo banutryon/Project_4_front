@@ -86,7 +86,7 @@ class App extends Component {
       <Map />
     
     {this.state.locations.map((location) => {
-      return <Location key={location.id} 
+      return <Location key={location.id}
       location={location}
       updateLocation={this.updateLocation}
       deleteLocation={this.deleteLocation}
