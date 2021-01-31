@@ -32,6 +32,7 @@ class App extends Component {
   }
 
   handleSubmit = (event) => {
+    event.target.reset()
     event.preventDefault()
     axios.post('https://altliving.herokuapp.com/locations/', this.state).then((response) => {
       this.getLocations()
@@ -49,6 +50,7 @@ class App extends Component {
 
   updateLocation = (event) => {
     event.preventDefault()
+    event.target.reset()
     let id = parseInt(event.target.id)
     axios
       .put('https://altliving.herokuapp.com/locations/' + id, this.state)
@@ -79,7 +81,8 @@ class App extends Component {
     return (
     <div>
       <Navbar 
-      // navbar={navbar}
+      location={location}
+      handleSubmit={this.handleSubmit}
       />
       {/* <h1>Hello World</h1> */}
       
