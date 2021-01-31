@@ -5,8 +5,8 @@ class Navbar extends Component {
         return (
             <nav className='navbar'>
                 <ul className='left-link'>
-                    <li className='buy'>Buy</li>
-                    <li className='about-us'>About us</li>
+                    <li className='buy'><a href='#'></a>Buy</li>
+                    <li className='about-us'><a href="#">About us</a></li>
                 </ul>
                 <div className='logo'>ALT Living</div>
                 <ul className='right-link'>
