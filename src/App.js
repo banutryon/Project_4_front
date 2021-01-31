@@ -81,11 +81,8 @@ class App extends Component {
     return (
     <div>
       <Navbar 
-<<<<<<< HEAD
       state={this.state}
-=======
       
->>>>>>> 207ec9b4493d7fdb9a9f5f3d359fc2939696500b
       handleSubmit={this.handleSubmit}
       />
       
