@@ -3,21 +3,21 @@ import React, { Component } from 'react'
 class Location extends Component {
     render = () => {
         return (
-            <div ClassName="locations">
-                <h4>Name: {this.props.locations.name}</h4>
-                <h5>Street: {this.props.locations.street}</h5>
-                <h5>City: {this.props.locations.city}</h5>
-                <h5>State: {this.props.locations.state}</h5>
-                <h5>Zipcode: {this.props.locations.zipcode}</h5>
-                <img className="img1" src={this.state.img1} alt="images" />
-                <img className="img1" src={this.state.img2} alt="images" />
-                <img className="img1" src={this.state.img3} alt="images" />
-                <p>Description: {this.props.locations.description}</p>
+            <div className="locations">
+                <h4>Name: {this.props.location.name}</h4>
+                <h5>Street: {this.props.location.street}</h5>
+                <h5>City: {this.props.location.city}</h5>
+                <h5>State: {this.props.location.state}</h5>
+                <h5>Zipcode: {this.props.location.zipcode}</h5>
+                <img className="img1" src={this.props.location.img1} alt="images" />
+                <img className="img1" src={this.props.location.img2} alt="images" />
+                <img className="img1" src={this.props.location.img3} alt="images" />
+                <p>Description: {this.props.location.description}</p>
 
-                <detials>
-                    <summary>Edit Person</summary>
+                <details>
+                    <summary>Edit Location</summary>
                     <form id={this.props.location.id}
-                    onSubmit={this.props.person.id}>
+                    onSubmit={this.props.updateLocation}>
                     <label htmlFor="name">Name</label>
                     <br />
                     <input type="text" id="name" 
@@ -36,6 +36,11 @@ class Location extends Component {
                     <label htmlFor="state">State</label>
                     <br />
                     <input type="text" id="state" 
+                    onChange={this.props.handleChange} />
+                    <br />
+                    <label htmlFor="zipcode">Zipcode</label>
+                    <br />
+                    <input type="text" id="zipcode" 
                     onChange={this.props.handleChange} />
                     <br />
                     <label htmlFor="img1">Image1</label>
@@ -61,11 +66,10 @@ class Location extends Component {
                     <input type="submit" value="Update Location" />
 
                     </form>
-                </detials>
+                </details>
                 <button value={this.props.location.id} 
                 onClick={this.props.deleteLocation}>Delete</button>
             </div>
-
         )
     }
 

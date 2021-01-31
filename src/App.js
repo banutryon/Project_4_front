@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import Location from './components/Location'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Map from './components/Map'
 
 
 
 
 import axios from 'axios'
 
-class App extends React.Component {
+class App extends Component {
   state = {
     name: '',
     street: '',
@@ -30,13 +31,14 @@ class App extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    axios.post('/locations', this.state).then((response) => {
+    axios.post('https://altliving.herokuapp.com/locations/', this.state).then((response) => {
       this.getLocations()
     })
   }
 // ===========DELETE ==================
   deleteLocation = (event) => {
-    axios.delete('/locations/' + event.target.value).then((response) => {
+    let id = parseInt(event.target.value)
+    axios.delete('https://altliving.herokuapp.com/locations/' + id).then((response) => {
       this.getLocations()
 
     })
@@ -45,16 +47,18 @@ class App extends React.Component {
 
   updateLocation = (event) => {
     event.preventDefault()
-    const id = event.target.id
-    axios.put('/people/' + id, this.state).then((response) => {
-      this.getLocations()
+    let id = parseInt(event.target.id)
+    axios
+      .put('https://altliving.herokuapp.com/locations/' + id, this.state)
+      .then((response) => {
+        this.getLocations()
     })
   }
 // ===========GET ==================
 
   getLocations = () => {
     axios
-    .get('/locations')
+    .get('https://altliving.herokuapp.com/locations/')
     .then(
       (response) => this.setState({ locations: response.data }),
       (err) => console.error(err) 
@@ -75,9 +79,9 @@ class App extends React.Component {
       <Navbar 
       // navbar={navbar}
       />
-      <h1>Hello World</h1>
-      <Footer />
-    
+      {/* <h1>Hello World</h1> */}
+      
+      <Map />
     
     {this.state.locations.map((location) => {
       return <Location key={location.id} 
@@ -85,8 +89,14 @@ class App extends React.Component {
       updateLocation={this.updateLocation}
       deleteLocation={this.deleteLocation}
       handleChange={this.handleChange}
+      // handleSubmit={this.handleSubmit}
        />
     })}
+
+
+    
+
+    <Footer />
     </div>
     )
   }
