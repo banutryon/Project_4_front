@@ -7,7 +7,7 @@ const libraries = ["places"]
 
 const mapContainerStyle = {
     width: "40vw",
-    height: "40vh"
+    height: "50vh"
 }
 
 const center = {
