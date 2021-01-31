@@ -4,18 +4,22 @@ class Location extends Component {
     render = () => {
         return (
             <div className="locations">
-                <h4>Name: {this.props.location.name}</h4>
-                <h5>Street: {this.props.location.street}</h5>
-                <h5>City: {this.props.location.city}</h5>
-                <h5>State: {this.props.location.state}</h5>
-                <h5>Zipcode: {this.props.location.zipcode}</h5>
-                <img className="img1" src={this.props.location.img1} alt="images" />
-                <img className="img1" src={this.props.location.img2} alt="images" />
-                <img className="img1" src={this.props.location.img3} alt="images" />
+                <img className="img" src={this.props.location.img1} alt="images" />
+                <img className="img" src={this.props.location.img2} alt="images" />
+                <img className="img" src={this.props.location.img3} alt="images" />
+                <div className="textbox">
+                <h2>{this.props.location.name}</h2>
+                <h6>Street: {this.props.location.street}</h6>
+                <h6>City: {this.props.location.city}</h6>
+                <h6>State: {this.props.location.state}</h6>
+                <h6>Zipcode: {this.props.location.zipcode}</h6>
                 <p>Description: {this.props.location.description}</p>
-
+                </div>
                 <details>
-                    <summary>Edit Location</summary>
+                    <summary><img 
+                    className="Edit"
+                    src="https://cdn0.iconfinder.com/data/icons/glyphpack/19/edit-512.png" 
+                    alt="edit icon" /></summary>
                     <form 
                     id={this.props.location.id}
                     onSubmit={this.props.updateLocation}>
@@ -119,16 +123,20 @@ class Location extends Component {
                     onChange={this.props.handleChange} />
                     <br />
 
-                    <input 
+                    <input
+                    className="editButton"
                     type="submit" 
                     value="Update Location" />
 
                     </form>
+                    <button
+                        className="editButton"
+                        value={this.props.location.id} 
+                        onClick={this.props.deleteLocation}>
+                        Delete
+                    </button>
                 </details>
-                <button 
-                value={this.props.location.id} 
-                onClick={this.props.deleteLocation}>
-                    Delete</button>
+                
             </div>
         )
     }
