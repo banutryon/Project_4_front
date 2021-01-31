@@ -3,9 +3,14 @@ body {
 }
 
 // ========Nav Bar===============
-li {
+.link {
     list-style: none;
-    margin: 0 50px;
+    margin: 0 10%;
+    width: 140px;
+}
+ a {
+    text-decoration: none;
+    color: black;
 }
 ul {
     display: flex;
@@ -19,11 +24,28 @@ ul {
     background-color: white;
 }
 .left-link {
-    margin-right: 300px;
+    margin-right: 10%;
 }
 .right-link {
-    margin-left: 300px;
+    margin-left: 10%;
 }
+.logo {
+    width: 170px;
+    height: 60px;
+}
+.create {
+    list-style-type: none;
+    
+}
+.createImg {
+    height: 50px;
+    width: 50px;
+    margin-right: 50px;
+}
+.createButton input {
+ width: 150px;
+}
+
 // =============Display image==========
 .homeImg {
     width: 100vw;
@@ -58,7 +80,7 @@ ul {
 h6 {
     margin: 5px;
 }
-details {
+.details {
     list-style-type: none;
     text-decoration:none;
     background-color:rgba(121, 133, 117, 0.126);
