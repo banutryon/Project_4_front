@@ -1,0 +1,102 @@
+body {
+    background-color: ghostwhite;
+}
+
+// ========Nav Bar===============
+li {
+    list-style: none;
+    margin: 0 50px;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    background-color: white;
+}
+.left-link {
+    margin-right: 300px;
+}
+.right-link {
+    margin-left: 300px;
+}
+// =============Display image==========
+.homeImg {
+    width: 100vw;
+}
+
+
+//=============== map=============
+
+.map {
+    float: right;
+    margin: 30px;
+    vertical-align: center;
+}
+// ============location box=================
+.img { 
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    // vertical-align: middle;
+}
+.locations {
+    margin-top: 10px;
+    width: 50vw;
+    padding: 5px;
+    background-color:#00523627 ;
+}
+.textbox {
+    background-color:white ;
+    text-align: center;
+    padding-bottom: 5px;
+}
+h6 {
+    margin: 5px;
+}
+details {
+    list-style-type: none;
+    text-decoration:none;
+    background-color:rgba(121, 133, 117, 0.126);
+    text-align: center;
+    padding: 10px;
+}
+input {
+    width: 500px;
+    height: 20px;
+}
+details summary::-webkit-details-marker {
+    display:none;
+  }
+details summary:focus {
+    outline: none;
+  }
+.editButton {
+    margin: 5px;
+    width: 150px;
+    height: 25px;
+}
+.Edit {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+
+// =========footer========
+.footer {
+    text-align: center;
+    width: 100vw;
+    margin-top: 50px;
+    background-color: white;
+    padding: 20px;
+}
+.footer ul {
+    display: flex;
+    justify-content: space-around;
+    
+}
