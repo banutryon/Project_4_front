@@ -81,10 +81,16 @@ class App extends Component {
     return (
     <div>
       <Navbar 
+<<<<<<< HEAD
       state={this.state}
+=======
+      
+>>>>>>> 207ec9b4493d7fdb9a9f5f3d359fc2939696500b
       handleSubmit={this.handleSubmit}
       />
-      {/* <h1>Hello World</h1> */}
+      
+      <img className="homeImg" src="https://images.unsplash.com/photo-1596135811068-0daf0b1e3b3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1692&q=80" alt='HomeImg'/>
+      
       
       <Map />
     
