@@ -9,13 +9,14 @@ class Location extends Component {
                 <img className="img" src={this.props.location.img3} alt="images" />
                 <div className="textbox">
                 <h2>{this.props.location.name}</h2>
+                <h2>{this.props.location.price}</h2>
                 <h6>Street: {this.props.location.street}</h6>
                 <h6>City: {this.props.location.city}</h6>
                 <h6>State: {this.props.location.state}</h6>
                 <h6>Zipcode: {this.props.location.zipcode}</h6>
                 <p>Description: {this.props.location.description}</p>
                 </div>
-                <details>
+                <details className="details">
                     <summary><img 
                     className="Edit"
                     src="https://cdn0.iconfinder.com/data/icons/glyphpack/19/edit-512.png" 
@@ -29,6 +30,15 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="name"
+                    // defaultValue={this.props.location.name} 
+                    onChange={this.props.handleChange} />
+                    <br />
+
+                    <label htmlFor="price">Price</label>
+                    <br />
+                    <input 
+                    type="text" 
+                    id="price"
                     // defaultValue={this.props.location.name} 
                     onChange={this.props.handleChange} />
                     <br />
