@@ -28,7 +28,7 @@ class Location extends Component {
                     defaultValue={this.props.location.name} 
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="street">Street</label>
                     <br />
                     <input 
@@ -37,7 +37,7 @@ class Location extends Component {
                     defaultValue={this.props.location.street}
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="city">City</label>
                     <br />
                     <input 
@@ -46,7 +46,7 @@ class Location extends Component {
                     defaultValue={this.props.location.city}
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="state">State</label>
                     <br />
                     <input 
@@ -55,7 +55,7 @@ class Location extends Component {
                     defaultValue={this.props.location.state}
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="zipcode">Zipcode</label>
                     <br />
                     <input 
@@ -63,16 +63,17 @@ class Location extends Component {
                     id="zipcode"
                     defaultValue={this.props.location.zipcode}
                     onChange={this.props.handleChange} />
-                    <br />           
-{/* ============================================================ */}
+                    <br /> 
+
                     <label htmlFor="lat">Lat</label>
+                    <br />
                     <input 
                     type="text" 
                     id="lat"
                     defaultValue={this.props.location.lat} 
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="lng">Lng</label>
                     <br />
                     <input 
@@ -81,7 +82,7 @@ class Location extends Component {
                     defaultValue={this.props.location.lng} 
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="img1">Image1</label>
                     <br />
                     <input 
@@ -90,7 +91,7 @@ class Location extends Component {
                     defaultValue={this.props.location.img1} 
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="img2">Image2</label>
                     <br />
                     <input 
@@ -99,7 +100,7 @@ class Location extends Component {
                     defaultValue={this.props.location.img2}
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="img3">Image3</label>
                     <br />
                     <input 
@@ -108,7 +109,7 @@ class Location extends Component {
                     defaultValue={this.props.location.img3}
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <label htmlFor="description">Description</label>
                     <br />
                     <input 
@@ -117,7 +118,7 @@ class Location extends Component {
                     defaultValue={this.props.location.description}
                     onChange={this.props.handleChange} />
                     <br />
-{/* ============================================================ */}
+
                     <input 
                     type="submit" 
                     value="Update Location" />
