@@ -5,13 +5,13 @@ class Navbar extends Component {
         return (
             <nav className='navbar'>
                 <ul className='left-link'>
-                    <li className='buy'><a href='#'></a>Buy</li>
+                    <li className='buy'><a href='#'>Buy</a></li>
                     <li className='about-us'><a href="#">About us</a></li>
                 </ul>
-                <div className='logo'>ALT Living</div>
+                <div className='logo'><img src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></div>
                 <ul className='right-link'>
-                    <li className='login'>Login</li>
-                    <li className='signup'>Sign up</li>
+                    <li className='login'><a href='#'>Log in</a></li>
+                    <li className='signup'><a href='#'>Sign Up</a></li>
                     <li className='create'>
                         <details>
                             <summary>Create</summary>
