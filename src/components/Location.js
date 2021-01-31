@@ -9,6 +9,7 @@ class Location extends Component {
                 <img className="img" src={this.props.location.img3} alt="images" />
                 <div className="textbox">
                 <h2>{this.props.location.name}</h2>
+                <h2>{this.props.location.price}</h2>
                 <h6>Street: {this.props.location.street}</h6>
                 <h6>City: {this.props.location.city}</h6>
                 <h6>State: {this.props.location.state}</h6>
@@ -29,6 +30,15 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="name"
+                    // defaultValue={this.props.location.name} 
+                    onChange={this.props.handleChange} />
+                    <br />
+
+                    <label htmlFor="price">Price</label>
+                    <br />
+                    <input 
+                    type="text" 
+                    id="price"
                     // defaultValue={this.props.location.name} 
                     onChange={this.props.handleChange} />
                     <br />

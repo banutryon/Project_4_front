@@ -12,6 +12,7 @@ import axios from 'axios'
 class App extends Component {
   state = {
     name: '',
+    price: '',
     street: '',
     city: '',
     state: '',
