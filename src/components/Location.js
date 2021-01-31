@@ -16,7 +16,7 @@ class Location extends Component {
                 <h6>Zipcode: {this.props.location.zipcode}</h6>
                 <p>Description: {this.props.location.description}</p>
                 </div>
-                <details>
+                <details className="details">
                     <summary><img 
                     className="Edit"
                     src="https://cdn0.iconfinder.com/data/icons/glyphpack/19/edit-512.png" 
