@@ -50,7 +50,7 @@ class App extends Component {
 
   updateLocation = (event) => {
     event.preventDefault()
-    event.target.reset()
+    // event.target.reset()
     let id = parseInt(event.target.id)
     axios
       .put('https://altliving.herokuapp.com/locations/' + id, this.state)
