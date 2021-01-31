@@ -81,7 +81,7 @@ class App extends Component {
     return (
     <div>
       <Navbar 
-      location={location}
+      
       handleSubmit={this.handleSubmit}
       />
       {/* <h1>Hello World</h1> */}
