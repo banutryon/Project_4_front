@@ -40,15 +40,19 @@ ul {
 .createImg {
     height: 50px;
     width: 50px;
-    margin-right: 50px;
+
 }
-.createButton input {
+
+.createButton input{
  width: 150px;
+ background-color: rgba(255, 255, 255, 0.27);
+ 
 }
 
 // =============Display image==========
 .homeImg {
     width: 100vw;
+    
 }
 
 
@@ -64,6 +68,7 @@ ul {
     width: 300px;
     height: 300px;
     margin: 10px;
+   
     // vertical-align: middle;
 }
 .locations {

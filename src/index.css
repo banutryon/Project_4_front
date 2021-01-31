@@ -46,11 +46,11 @@ ul {
 .createImg {
   height: 50px;
   width: 50px;
-  margin-right: 50px;
 }
 
 .createButton input {
   width: 150px;
+  background-color: rgba(255, 255, 255, 0.27);
 }
 
 .homeImg {
