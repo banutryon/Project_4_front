@@ -5,8 +5,8 @@ class Navbar extends Component {
         return (
             <nav className='navbar'>
                 <ul className='left-link'>
-                    <li className='buy'>Buy</li>
-                    <li className='about-us'>About us</li>
+                    <li className='buy'><a href='#'></a>Buy</li>
+                    <li className='about-us'><a href="#">About us</a></li>
                 </ul>
                 <div className='logo'>ALT Living</div>
                 <ul className='right-link'>
@@ -60,6 +60,33 @@ class Navbar extends Component {
                                  value={this.props.state.zipcode} />  
                                  <br />
 
+                                 <label htmlFor="name">Latitude</label>
+                                <br />
+                                 <input 
+                                 type="text" 
+                                 id="lat"
+                                 onChange={this.props.handleChange}
+                                 value={this.props.state.lat} /> 
+                                 <br />
+
+                                 <label htmlFor="name">Longitude</label>
+                                <br />
+                                 <input 
+                                 type="text" 
+                                 id="lng"
+                                 onChange={this.props.handleChange}
+                                 value={this.props.state.lng} /> 
+                                 <br />
+
+                                  <label htmlFor="name">Name</label>
+                                <br />
+                                 <input 
+                                 type="text" 
+                                 id="name"
+                                 onChange={this.props.handleChange}
+                                 value={this.props.state.name} /> 
+                                 <br />
+
                                  <label htmlFor="img1">Image 1</label>
                                  <br />
                                  <input 
@@ -94,6 +121,15 @@ class Navbar extends Component {
                                  id="description"
                                  onChange={this.props.handleChange}
                                  value={this.props.state.description} />  
+                                 <br />
+
+                                 <label htmlFor="name">Price</label>
+                                <br />
+                                 <input 
+                                 type="text" 
+                                 id="price"
+                                 onChange={this.props.handleChange}
+                                 value={this.props.state.price} /> 
                                  <br />
 
                                  <button
