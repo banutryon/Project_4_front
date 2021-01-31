@@ -34,7 +34,7 @@ ul {
 
 .map {
     float: right;
-    margin: 30px;
+    margin: 50px 50px 20px 0;
     vertical-align: center;
 }
 // ============location box=================
@@ -45,7 +45,7 @@ ul {
     // vertical-align: middle;
 }
 .locations {
-    margin-top: 10px;
+    margin: 50px 0 20px 50px;
     width: 50vw;
     padding: 5px;
     background-color:#00523627 ;
@@ -85,6 +85,7 @@ details summary:focus {
     height: 30px;
     display: block;
     margin: auto;
+    padding: 2px;
 }
 
 // =========footer========
