@@ -16,6 +16,8 @@ class App extends Component {
     city: '',
     state: '',
     zipcode: '',
+    lat: '',
+    lng: '',
     img1: '',
     img2: '',
     img3: '',
