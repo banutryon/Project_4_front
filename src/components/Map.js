@@ -101,12 +101,12 @@ export const Map = () => {
                                         );
                                         mapRef.current.setZoom(expansionZoom);
                                         mapRef.current.panTo({ lat: lat, lng: lng})
-                                        setSelectedCenter(cluster)
+                                        // setSelectedCenter(cluster)
                                     }}
                                 >
                                     {pointCount}
                                 </div>
-                                {selectedCenter && (
+                                {/* {selectedCenter && (
                                 <InfoWindow
                                  onCloseClick={() => {
                                     setSelectedCenter(null);
@@ -117,7 +117,7 @@ export const Map = () => {
                                  }}
                                  >
                                  </InfoWindow>
-                                 )}
+                                 )} */}
                                 
                             </Marker>
                         )
