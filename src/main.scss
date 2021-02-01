@@ -4,6 +4,7 @@ $sg-white  : #eaeaea;
 $sg-green : #107D3F;
 $sg-blue    : #88A5C1;
 $sg-trueWhite : rgb(255, 255, 255);
+// =======Global=================
 html {
     width:0;
     
@@ -23,7 +24,6 @@ a:hover {
 // ========Nav Bar===============
 .link {
     list-style: none;
-    margin: 0 10%;
     width: 140px;
 }
 
@@ -39,8 +39,7 @@ ul {
     flex-direction: row;
 }
 .navbar {
-    display: flex;
-    flex-direction: row;
+   @extend ul;
     width: 100vw;
     height: 80px;
     justify-content: center;
@@ -48,10 +47,10 @@ ul {
     background-color: $sg-trueWhite;
 }
 .left-link {
-    margin: 0 20%;
+    margin-left:30px;
 }
 .right-link {
-    margin: 0 20%;
+    margin-right: 30px;
 }
 .logo {
     margin-top: 15px;
