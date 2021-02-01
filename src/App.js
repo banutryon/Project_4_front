@@ -29,11 +29,12 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       [event.target.id]: event.target.value,
+    
     })
   }
 
   handleSubmit = (event) => {
-    event.target.reset()
+    // event.target.reset()
     event.preventDefault()
     axios.post('https://altliving.herokuapp.com/locations/', this.state).then((response) => {
       this.getLocations()
@@ -63,7 +64,7 @@ class App extends Component {
 
   getLocations = () => {
     axios
-    .get('https://altliving.herokuapp.com/locations/')
+    .get('https://altliving.herokuapp.com/locations')
     .then(
       (response) => this.setState({ locations: response.data }),
       (err) => console.error(err) 
@@ -83,7 +84,7 @@ class App extends Component {
     <div>
       <Navbar 
       state={this.state}
-      
+      handleChange={this.handleChange}
       handleSubmit={this.handleSubmit}
       />
       
@@ -93,7 +94,7 @@ class App extends Component {
       <Map />
     
     {this.state.locations.map((location) => {
-      return <Location key={location.id} 
+      return <Location key={location.id}
       location={location}
       updateLocation={this.updateLocation}
       deleteLocation={this.deleteLocation}

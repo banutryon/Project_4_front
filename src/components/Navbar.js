@@ -16,6 +16,9 @@ class Navbar extends Component {
                                 className="createImg"
                                 src="https://lh3.googleusercontent.com/lD6ebv6mUx-zwTuOd06O1taMi4LyCU7I2KBllXQinrManiOpNI4jMdvJeooydbRMx0_ejVdAMVv8I0rst2OxovhRiPgPLITB8R4-wET0GCbBQrjdg0QTTvBQi3B7UIfpvkTKNLCzAUs=w2400" 
                                 alt="create icon" /></summary>
+                                <form
+                                onSubmit={this.props.handleSubmit}>
+
                                 <label htmlFor="name">Name</label>
                                 <br />
                                  <input 
@@ -79,14 +82,6 @@ class Navbar extends Component {
                                  value={this.props.state.lng} /> 
                                  <br />
 
-                                  <label htmlFor="name">Name</label>
-                                <br />
-                                 <input 
-                                 type="text" 
-                                 id="name"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.name} /> 
-                                 <br />
 
                                  <label htmlFor="img1">Image 1</label>
                                  <br />
@@ -132,11 +127,12 @@ class Navbar extends Component {
                                  onChange={this.props.handleChange}
                                  value={this.props.state.price} /> 
                                  <br />
+                                 </form>
 
                                  <button
                                   className="createButton"
                                  value={this.props.state.id} 
-                                 onClick={this.props.handleChange}>
+                                 onClick={this.props.handleSubmit}>
                                 Create 
                                </button>
 
