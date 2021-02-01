@@ -1,8 +1,9 @@
-import React, { useState, useRef, Children } from "react"
+import React, { useState, useRef } from "react"
 import useSwr from "swr"
 import GoogleMapReact from "google-map-react"
 // import mapStyles from '../mapStyles'
 import useSupercluster from "use-supercluster"
+
 const options = {
     // styles: mapStyles,
     disableDefaultUI: true,
@@ -13,7 +14,9 @@ const fetcher = (...args) => fetch(...args).then(response => response.json());
 
 const Marker = ({children}) => children;
 
-const InfoWindow = ({children}) => children
+// const InfoWindow = () => (
+//     props.show ? (<div style={{width: 100, height: 100}}>{props.children}</div>) : null
+//   )
 
 export const Map = () => {
 
@@ -49,7 +52,6 @@ export const Map = () => {
     })
 
     // Info window
-    const {selectedCenter, setSelectedCenter} = useState(null);
 
     return (
         <div className="map" style={{ height: "50vh", width: "40vw" }}>
@@ -101,24 +103,10 @@ export const Map = () => {
                                         );
                                         mapRef.current.setZoom(expansionZoom);
                                         mapRef.current.panTo({ lat: lat, lng: lng})
-                                        // setSelectedCenter(cluster)
                                     }}
                                 >
                                     {pointCount}
-                                </div>
-                                {/* {selectedCenter && (
-                                <InfoWindow
-                                 onCloseClick={() => {
-                                    setSelectedCenter(null);
-                                  }}
-                                 position={{
-                                    lat: selectedCenter.latitude,
-                                    lng: selectedCenter.longitude
-                                 }}
-                                 >
-                                 </InfoWindow>
-                                 )} */}
-                                
+                                </div>    
                             </Marker>
                         )
                     }
@@ -128,10 +116,14 @@ export const Map = () => {
                         lat={lat}
                         lng={lng}
                         >
-                        <button style={{background: "none", border: "none"}}>
+                        <button 
+                            style={{background: "none", border: "none"}}
+                            onClick={() => {
+                                console.log('asdf')
+                            }}>
                             <img src="https://i.imgur.com/OrUiy95.png"
                             style={{height: "45px", width: "45px"}}/>
-                        </button >
+                        </button>
                     </Marker>
                     )
 
@@ -152,6 +144,32 @@ export const Map = () => {
         </div>
     )
 }
+// import React from 'react';
+// import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps"
 
+// function MyMap() {
+//     return(
+//         <GoogleMap 
+//         defaultCenter={{lat: 39.5, lng: -98.35}}
+//         defaultZoom={3.5}
+//         />
+//     );
+// }
+
+// const WrappedMap = withScriptjs(withGoogleMap(MyMap));
+
+
+// export const Map = () => {
+//     return (
+//         <div style={{ height: "50vh", width: "40vw" }}>
+//             <WrappedMap
+//                 googleMapUrl={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&v=3.exp&libraries=geometry,drawing,places`}
+//                 loadingElement={<div style={{height: "100%"}} />}
+//                 containerElement={<div style={{height: "100%"}} />}
+//                 mapElement={<div style={{height: "100%"}} />}
+//                 />
+//         </div>
+//     )
+// }
 
 export default Map
