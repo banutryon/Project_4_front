@@ -127,6 +127,8 @@
 //     )
 // }
 
+
+
 import  React, { useState } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps";
 import useSwr from "swr";
@@ -190,9 +192,9 @@ const settings = {
                     <div>
                         <h3>{selectedLocation.name}</h3>
                         <Slider {...settings}>
-                            <img className="img" src={selectedLocation.img1} alt="images" />
-                            <img className="img" src={selectedLocation.img2} alt="images" />
-                            <img className="img" src={selectedLocation.img3} alt="images" />
+                            <img className="mapimg" src={selectedLocation.img1} alt="images" />
+                            <img className="mapimg" src={selectedLocation.img2} alt="images" />
+                            <img className="mapimg" src={selectedLocation.img3} alt="images" />
                         </Slider>
                     </div>
                 </InfoWindow>
