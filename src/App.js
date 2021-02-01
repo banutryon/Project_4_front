@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   handleSubmit = (event) => {
-    event.target.reset()
+    // event.target.reset()
     event.preventDefault()
     axios.post('https://altliving.herokuapp.com/locations/', this.state).then((response) => {
       this.getLocations()
@@ -85,7 +85,7 @@ class App extends Component {
     <div>
       <Navbar 
       state={this.state}
-      
+      handleChange={this.handleChange}
       handleSubmit={this.handleSubmit}
       />
       
