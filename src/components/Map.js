@@ -47,7 +47,7 @@ export const Map = () => {
 
 
     return (
-        <div className="map" style={{ height: "50vh", width: "40vw" }}>
+        <div className="map">
             <GoogleMapReact 
                 bootstrapURLKeys={{key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
                 defaultCenter={{lat: 39.5, lng: -98.35}}
