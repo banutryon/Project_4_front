@@ -1,5 +1,5 @@
 body {
-  background-color: ghostwhite;
+  background-color: #eaeaea;
 }
 
 details {
@@ -7,7 +7,7 @@ details {
 }
 
 a:hover {
-  color: green;
+  color: #107D3F;
 }
 
 .link {
@@ -18,7 +18,7 @@ a:hover {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #2d2f32;
 }
 
 a:active {
@@ -141,7 +141,7 @@ label {
 }
 
 .textbox {
-  background-color: white;
+  background-color: #eaeaea;
   text-align: center;
   margin-top: 25px;
   padding: 5px;
@@ -201,7 +201,7 @@ details summary:focus {
   text-align: center;
   width: 100vw;
   margin-top: 50px;
-  background-color: white;
+  background-color: #eaeaea;
   padding: 20px;
 }
 
