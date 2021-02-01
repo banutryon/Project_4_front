@@ -92,7 +92,7 @@ class App extends Component {
       
       
       <Map />
-    
+    <div className="scrollBox">
     {this.state.locations.map((location) => {
       return <Location key={location.id}
       location={location}
@@ -102,7 +102,7 @@ class App extends Component {
       // handleSubmit={this.handleSubmit}
        />
     })}
-
+  </div>
 
     
 

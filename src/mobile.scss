@@ -1,0 +1,121 @@
+$sg-grey   : rgb(149, 154, 146);
+$sg-black  : #2d2f32;
+$sg-white  : #eaeaea;
+$sg-green : #107D3F;
+$sg-blue    : #88A5C1;
+$sg-trueWhite : rgb(255, 255, 255);
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: orange;
+}
+
+// ================ Nav bar ============ //
+.link {
+    width: 70px;
+    
+}
+
+.navbar {
+    width: 100vw;
+    height: 80px;
+    background-color: $sg-white;
+
+}
+
+.left-link {
+    margin: 0
+}
+
+.right-link {
+    margin: 0
+}
+
+.createDetails {
+    width: 150px;
+}
+
+// ================ Display Image ============ //
+.homeImg {
+    width: 100vw;
+    height: 120px;
+}
+
+
+// ================ Map ============ //
+.map {
+
+    float: none;
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 100vw;
+    height: 30vh;
+    // border-radius: 10px;
+}
+
+
+// ================ Location box images ============ //
+.img {
+    width: 300px;
+    height: 200px;
+}
+
+
+// ================ Scroll location box============ //
+.scrollBox {
+    width: 100vw;
+    height: 500px;
+    margin: 10px 0 0 0;
+    // padding: 1px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid purple;
+}
+
+
+
+// ================ Location box ============ //
+.locations {
+    width: 100vw;
+    // height: 480px;
+    margin: 10px 0px 10px 0px;
+    display: block;
+}
+
+
+
+// ================ Text box ============ //
+input {
+    width: 150px;
+}
+
+
+
+// ================ Footer ============ //
+.footer {
+    width: 100vw;
+    padding: 0;
+}
+
+.footer ul {
+
+}
+
+
+
+
+
+
+
+}
+

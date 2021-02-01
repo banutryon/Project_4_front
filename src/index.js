@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './Map.css'
+import './Map.css';
+import './mobile.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

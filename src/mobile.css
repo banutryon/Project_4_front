@@ -1,0 +1,78 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: orange;
+  }
+
+  .link {
+    width: 70px;
+  }
+
+  .navbar {
+    width: 100vw;
+    height: 80px;
+    background-color: #eaeaea;
+  }
+
+  .left-link {
+    margin: 0;
+  }
+
+  .right-link {
+    margin: 0;
+  }
+
+  .createDetails {
+    width: 150px;
+  }
+
+  .homeImg {
+    width: 100vw;
+    height: 120px;
+  }
+
+  .map {
+    float: none;
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .scrollBox {
+    width: 100vw;
+    height: 500px;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid purple;
+  }
+
+  .locations {
+    width: 100vw;
+    margin: 10px 0px 10px 0px;
+    display: block;
+  }
+
+  input {
+    width: 150px;
+  }
+
+  .footer {
+    width: 100vw;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */
