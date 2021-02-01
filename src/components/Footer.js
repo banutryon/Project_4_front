@@ -5,12 +5,12 @@ class Footer extends Component {
         return (
             <div className='footer'>
                 <ul className='footlinks'>
-                    <li className='about'>About</li>
-                    <li className='terms'>Terms of Use</li>
-                    <li className='help'>Help</li>
-                    <li className='contact'>Contact Us</li>
-                    <li className='feedback'>Provide Feedback</li>
-                    <li className='social'>LinkedIn</li>
+                    <li className='about'><a href='#'>About</a></li>
+                    <li className='terms'><a href='#'>Terms of Use</a></li>
+                    <li className='help'><a href='#'>Help</a></li>
+                    <li className='contact'><a href='#'>Contact Us</a></li>
+                    <li className='feedback'><a href='#'>Provide Feedback</a></li>
+                    <li className='social'><a href='#'>LinkedIn</a></li>
                 </ul>
                 <div>
                     <p>Information about our User story, what makes use diffrent, our mission and a little bit about what inspired us.</p>

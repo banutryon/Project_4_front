@@ -1,5 +1,12 @@
 body {
     background-color: ghostwhite;
+
+}
+details {
+    cursor: pointer;
+}
+a:hover {
+    color: green;
 }
 
 // ========Nav Bar===============
@@ -8,9 +15,13 @@ body {
     margin: 0 10%;
     width: 140px;
 }
+
  a {
     text-decoration: none;
     color: black;
+}
+a:active {
+    cursor: grabbing;
 }
 ul {
     display: flex;
@@ -20,14 +31,16 @@ ul {
     display: flex;
     flex-direction: row;
     width: 100vw;
+    height: 100px;
     justify-content: center;
+    align-items: center;
     background-color: white;
 }
 .left-link {
-    margin-right: 10%;
+    margin: 0 20%;
 }
 .right-link {
-    margin-left: 10%;
+    margin: 0 20%;
 }
 .logo {
     width: 170px;
@@ -35,20 +48,43 @@ ul {
 }
 .create {
     list-style-type: none;
-    
+    margin: -10px 0 0 0;
 }
+
 .createImg {
-    height: 50px;
-    width: 50px;
-    margin-right: 50px;
+    height: 35px;
+    width: 35px;
+    margin-bottom: 20px;
+
 }
-.createButton input {
- width: 150px;
+.createDetails{
+    width: 430px;
+    position: absolute;
+    margin-right: 10px;
+    z-index: 1;
+}
+.createForm {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0 0 3px;
+}
+label {
+    text-align: left;
+}
+.createDetails input{
+    width: 100px;
+    margin: 2px 40px 2px 5px;
+    background-color: rgba(255, 255, 255, 0.27);
+}
+.createButton {
+    display: block;
+    margin: 10px auto;
 }
 
 // =============Display image==========
 .homeImg {
     width: 100vw;
+
 }
 
 
@@ -59,33 +95,72 @@ ul {
     margin: 50px 50px 20px 0;
     vertical-align: center;
 }
-// ============location box=================
+// ============location box images=================
+
 .img { 
-    width: 300px;
+    width: 600px;
     height: 300px;
-    margin: 10px;
-    // vertical-align: middle;
+    border-radius: 10px;
+}
+
+
+// ============location box=================
+.slides {
+  position: relative;
+}
+.slick-dots {
+    margin-bottom: -15px;
+    bottom: 0;
+}
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index:1;
+}
+
+.slides .slick-prev {
+  left: 2%;
+}
+
+.slides .slick-next {
+  right: 2%;
 }
 .locations {
     margin: 50px 0 20px 50px;
-    width: 50vw;
+    width: 700px;
     padding: 5px;
-    background-color:#00523627 ;
+    background-color:rgba(72, 109, 94, 0.441) ;
+    border-radius: 10px;
 }
+// ========TextBox=========
 .textbox {
     background-color:white ;
     text-align: center;
-    padding-bottom: 5px;
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 5px;
 }
-h6 {
-    margin: 5px;
+.textbox-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: between;
+    border: 1px solid rgba(255, 255, 255, 0);
+} 
+.flex-info {
+    width: 150px;
+    margin: 5px 10px;
+    text-align: left;
 }
+
 .details {
     list-style-type: none;
     text-decoration:none;
     background-color:rgba(121, 133, 117, 0.126);
     text-align: center;
     padding: 10px;
+    
 }
 input {
     width: 500px;
@@ -121,5 +196,7 @@ details summary:focus {
 .footer ul {
     display: flex;
     justify-content: space-around;
-    
+}
+.footer li {
+    list-style: none;
 }

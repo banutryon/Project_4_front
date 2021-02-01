@@ -5,18 +5,16 @@ class Navbar extends Component {
         return (
             <nav className='navbar'>
                 <ul className='left-link'>
+                
                     <li className='link'><a href='#'>Buy</a></li>
                     <li className='link'><a href="#">About us</a></li>
-                </ul>
-                <a href="https://pure-stream-81491.herokuapp.com/"><img className='logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
-                <ul className='right-link'>
-                <li className='create'>
-                        <details className="createButton">
+                    <li className='create'>
+                        <details className="createDetails">
                             <summary><img 
                                 className="createImg"
-                                src="https://lh3.googleusercontent.com/lD6ebv6mUx-zwTuOd06O1taMi4LyCU7I2KBllXQinrManiOpNI4jMdvJeooydbRMx0_ejVdAMVv8I0rst2OxovhRiPgPLITB8R4-wET0GCbBQrjdg0QTTvBQi3B7UIfpvkTKNLCzAUs=w2400" 
+                                src="https://lh3.googleusercontent.com/tzAcogOtr6ASgImIZ3VgwXGtpGyGMHeiZdQ4sz_WozasKt6pTmI2_ZDn44xE5LUMDI5tLBydaCFcrreeK8JIlKwbe51UXmlkZvXwfrsvsYiqnS1yuAlh4oAnQxYG10rojNOH7oXI0Do=w2400" 
                                 alt="create icon" /></summary>
-                                <form
+                                <form className="createForm"
                                 onSubmit={this.props.handleSubmit}>
 
                                 <label htmlFor="name">Name</label>
@@ -137,7 +135,11 @@ class Navbar extends Component {
                                </button>
 
                         </details>
-                    </li>   
+                    </li> 
+                </ul>
+                <a href="https://pure-stream-81491.herokuapp.com/"><img className='logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
+                <ul className='right-link'>
+                  
                     <li className='link'><a href='#'>Log in</a></li>
                     <li className='link'><a href='#'>Sign Up</a></li>
                     
