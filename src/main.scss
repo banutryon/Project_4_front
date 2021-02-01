@@ -4,10 +4,13 @@ $sg-white  : #eaeaea;
 $sg-green : #107D3F;
 $sg-blue    : #88A5C1;
 $sg-trueWhite : rgb(255, 255, 255);
-
-
+html {
+    width:0;
+    
+}
 body {
     background-color: $sg-white;
+    width: 100vw;
 
 }
 details {
@@ -39,7 +42,7 @@ ul {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 100px;
+    height: 80px;
     justify-content: center;
     align-items: center;
     background-color: $sg-trueWhite;
@@ -51,8 +54,9 @@ ul {
     margin: 0 20%;
 }
 .logo {
-    width: 170px;
-    height: 60px;
+    margin-top: 15px;
+    width: 200px;
+    height: 80px;
 }
 .create {
     list-style-type: none;
@@ -92,6 +96,7 @@ label {
 // =============Display image==========
 .homeImg {
     width: 100vw;
+    height: 250px;
 
 }
 
@@ -102,6 +107,8 @@ label {
     float: right;
     margin: 50px 50px 20px 0;
     vertical-align: center;
+    width: 45vw;
+    height: 50vh;
 }
 // ============location box images=================
 
@@ -111,8 +118,30 @@ label {
     border-radius: 10px;
 }
 
+// ===========Scroll box for locatios box=======
+.scrollBox {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 45vw;
+    height: 500px;
+    // border: 1px solid green;
+
+}
 
 // ============location box=================
+.locations {
+    display: block;
+    margin: 20px auto;
+    height: 700px;
+    width: 760px;
+    padding: 5px;
+    background-color:rgba(72, 109, 94, 0.441) ;
+    border-radius: 10px;
+    
+}
 .slides {
   position: relative;
 }
@@ -134,13 +163,7 @@ label {
 .slides .slick-next {
   right: 2%;
 }
-.locations {
-    margin: 50px 0 20px 50px;
-    width: 700px;
-    padding: 5px;
-    background-color:rgba(72, 109, 94, 0.441) ;
-    border-radius: 10px;
-}
+
 // ========TextBox=========
 .textbox {
     background-color:$sg-white ;
@@ -195,13 +218,17 @@ details summary:focus {
 
 // =========footer========
 .footer {
+    position: fixed;
+    height: 80px;
     text-align: center;
     width: 100vw;
     margin-top: 50px;
-    background-color: $sg-white;
-    padding: 20px;
+    // background-color: $sg-white;
+    background-color: $sg-blue;
+    
 }
 .footer ul {
+    padding: 0 10px;
     display: flex;
     justify-content: space-around;
 }
