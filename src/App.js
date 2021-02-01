@@ -24,11 +24,12 @@ class App extends Component {
     img3: '',
     locations: [],
   }
+  
   // Handle atributes allow you to create 
   handleChange = (event) => {
     event.preventDefault()
     this.setState({
-      [event.target.id]: event.target.value,
+      ...this.prevState, [event.target.id]: event.target.value,
     
     })
   }

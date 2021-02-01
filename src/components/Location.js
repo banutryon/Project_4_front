@@ -30,7 +30,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="name"
-                    // defaultValue={this.props.location.name} 
+                    defaultValue={this.props.location.name} 
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -39,7 +39,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="price"
-                    // defaultValue={this.props.location.name} 
+                    defaultValue={this.props.location.price} 
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -48,7 +48,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="street"
-                    // defaultValue={this.props.location.street}
+                    defaultValue={this.props.location.street}
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -57,7 +57,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="city"
-                    // defaultValue={this.props.location.city}
+                    defaultValue={this.props.location.city}
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -66,7 +66,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="state"
-                    // defaultValue={this.props.location.state}
+                    defaultValue={this.props.location.state}
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -75,7 +75,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="zipcode"
-                    // defaultValue={this.props.location.zipcode}
+                    defaultValue={this.props.location.zipcode}
                     onChange={this.props.handleChange} />
                     <br /> 
 
@@ -84,7 +84,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="lat"
-                    // defaultValue={this.props.location.lat} 
+                    defaultValue={this.props.location.lat} 
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -93,7 +93,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="lng"
-                    // defaultValue={this.props.location.lng} 
+                    defaultValue={this.props.location.lng} 
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -102,7 +102,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="img1"
-                    // defaultValue={this.props.location.img1} 
+                    defaultValue={this.props.location.img1} 
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -111,7 +111,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="img2"
-                    // defaultValue={this.props.location.img2}
+                    defaultValue={this.props.location.img2}
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -120,7 +120,7 @@ class Location extends Component {
                     <input 
                     type="text" 
                     id="img3"
-                    // defaultValue={this.props.location.img3}
+                    defaultValue={this.props.location.img3}
                     onChange={this.props.handleChange} />
                     <br />
 
@@ -129,7 +129,7 @@ class Location extends Component {
                     <input 
                     type="text"
                     id="description"
-                    // defaultValue={this.props.location.description}
+                    defaultValue={this.props.location.description}
                     onChange={this.props.handleChange} />
                     <br />
 

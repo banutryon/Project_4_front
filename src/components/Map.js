@@ -13,7 +13,10 @@ const fetcher = (...args) => fetch(...args).then(response => response.json());
 
 const Marker = ({children}) => children;
 
+const InfoWindow = ({children}) => children
+
 export const Map = () => {
+
     // Map Config
     const mapRef = useRef();
     const [zoom, setZoom] = useState(10);
@@ -45,6 +48,8 @@ export const Map = () => {
         options: {radius: 75, maxZoom: 20}
     })
 
+    // Info window
+    const {selectedCenter, setSelectedCenter} = useState(null);
 
     return (
         <div className="map" style={{ height: "50vh", width: "40vw" }}>
@@ -75,11 +80,14 @@ export const Map = () => {
                     } = cluster.properties;
 
                     if (isCluster) {
+                        
                         return (
                             <Marker 
                                 key={cluster.id}
                                 lat={lat}
-                                lng={lng}>
+                                lng={lng}
+
+                                >
                                 <div 
                                     className="cluster-marker"
                                     style={{
@@ -93,10 +101,24 @@ export const Map = () => {
                                         );
                                         mapRef.current.setZoom(expansionZoom);
                                         mapRef.current.panTo({ lat: lat, lng: lng})
+                                        setSelectedCenter(cluster)
                                     }}
                                 >
                                     {pointCount}
                                 </div>
+                                {selectedCenter && (
+                                <InfoWindow
+                                 onCloseClick={() => {
+                                    setSelectedCenter(null);
+                                  }}
+                                 position={{
+                                    lat: selectedCenter.latitude,
+                                    lng: selectedCenter.longitude
+                                 }}
+                                 >
+                                 </InfoWindow>
+                                 )}
+                                
                             </Marker>
                         )
                     }
