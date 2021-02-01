@@ -1,5 +1,10 @@
+html {
+  width: 0;
+}
+
 body {
   background-color: #eaeaea;
+  width: 100vw;
 }
 
 details {
@@ -12,7 +17,6 @@ a:hover {
 
 .link {
   list-style: none;
-  margin: 0 10%;
   width: 140px;
 }
 
@@ -25,32 +29,31 @@ a:active {
   cursor: grabbing;
 }
 
-ul {
+ul, .navbar {
   display: flex;
   flex-direction: row;
 }
 
 .navbar {
-  display: flex;
-  flex-direction: row;
   width: 100vw;
-  height: 100px;
+  height: 80px;
   justify-content: center;
   align-items: center;
   background-color: white;
 }
 
 .left-link {
-  margin: 0 20%;
+  margin-left: 30px;
 }
 
 .right-link {
-  margin: 0 20%;
+  margin-right: 30px;
 }
 
 .logo {
-  width: 170px;
-  height: 60px;
+  margin-top: 15px;
+  width: 200px;
+  height: 80px;
 }
 
 .create {
@@ -94,17 +97,40 @@ label {
 
 .homeImg {
   width: 100vw;
+  height: 250px;
 }
 
 .map {
   float: right;
   margin: 50px 50px 20px 0;
   vertical-align: center;
+  width: 45vw;
+  height: 50vh;
 }
 
 .img {
   width: 600px;
   height: 300px;
+  border-radius: 10px;
+}
+
+.scrollBox {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 45vw;
+  height: 500px;
+}
+
+.locations {
+  display: block;
+  margin: 20px auto;
+  height: 700px;
+  width: 760px;
+  padding: 5px;
+  background-color: rgba(72, 109, 94, 0.441);
   border-radius: 10px;
 }
 
@@ -130,14 +156,6 @@ label {
 
 .slides .slick-next {
   right: 2%;
-}
-
-.locations {
-  margin: 50px 0 20px 50px;
-  width: 700px;
-  padding: 5px;
-  background-color: rgba(72, 109, 94, 0.441);
-  border-radius: 10px;
 }
 
 .textbox {
@@ -198,14 +216,16 @@ details summary:focus {
 }
 
 .footer {
+  position: fixed;
+  height: 80px;
   text-align: center;
   width: 100vw;
   margin-top: 50px;
-  background-color: #eaeaea;
-  padding: 20px;
+  background-color: #88A5C1;
 }
 
-.footer ul {
+.footer ul, .footer .navbar {
+  padding: 0 10px;
   display: flex;
   justify-content: space-around;
 }
