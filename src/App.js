@@ -29,6 +29,7 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       [event.target.id]: event.target.value,
+    
     })
   }
 
@@ -63,7 +64,7 @@ class App extends Component {
 
   getLocations = () => {
     axios
-    .get('https://altliving.herokuapp.com/locations/')
+    .get('https://altliving.herokuapp.com/locations')
     .then(
       (response) => this.setState({ locations: response.data }),
       (err) => console.error(err) 
@@ -93,7 +94,7 @@ class App extends Component {
       <Map />
     
     {this.state.locations.map((location) => {
-      return <Location key={location.id} 
+      return <Location key={location.id}
       location={location}
       updateLocation={this.updateLocation}
       deleteLocation={this.deleteLocation}
