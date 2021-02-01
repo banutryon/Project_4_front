@@ -1,20 +1,45 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 class Location extends Component {
     render = () => {
+        const settings = {
+            dots: true, 
+            infinite: true,
+            fade: true, 
+            speed: 500,
+            slidesToScroll:1,
+            slidesToScrool:1, 
+            className: "slides"
+        }
         return (
             <div className="locations">
-                <img className="img" src={this.props.location.img1} alt="images" />
-                <img className="img" src={this.props.location.img2} alt="images" />
-                <img className="img" src={this.props.location.img3} alt="images" />
+                <Slider {...settings}>
+                    <img className="img" src={this.props.location.img1} alt="images" />
+                    <img className="img" src={this.props.location.img2} alt="images" />
+                    <img className="img" src={this.props.location.img3} alt="images" />
+                </Slider>
                 <div className="textbox">
-                <h2>{this.props.location.name}</h2>
-                <h2>{this.props.location.price}</h2>
-                <h6>Street: {this.props.location.street}</h6>
-                <h6>City: {this.props.location.city}</h6>
-                <h6>State: {this.props.location.state}</h6>
-                <h6>Zipcode: {this.props.location.zipcode}</h6>
-                <p>Description: {this.props.location.description}</p>
+                
+                    <h2>{this.props.location.name}</h2>
+                    <h2>{this.props.location.price}</h2>
+                <div className="textbox-flex">
+                    <h3 className="flex-info">Street:</h3>
+                    <p className="flex-info">{this.props.location.street}</p>
+                
+                    <h3 className="flex-info">City: </h3>
+                    <p className="flex-info">{this.props.location.city}</p>
+                
+                    <h3 className="flex-info">State: </h3>
+                    <p className="flex-info">{this.props.location.state}</p>
+                        
+                    <h3 className="flex-info">Zipcode: </h3>
+                    <p className="flex-info">{this.props.location.zipcode}</p>
+                </div>   
+                    <p>Description: {this.props.location.description}</p>
                 </div>
                 <details className="details">
                     <summary><img 
