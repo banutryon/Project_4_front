@@ -3,7 +3,7 @@ import Location from './components/Location'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Map from './components/Map'
-
+import './create.css'
 
 
 
@@ -92,7 +92,7 @@ class App extends Component {
       <img className="homeImg" src="https://images.unsplash.com/photo-1596135811068-0daf0b1e3b3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1692&q=80" alt='HomeImg'/>
       
       
-      <Map />
+    <Map />
     <div className="scrollBox">
     {this.state.locations.map((location) => {
       return <Location key={location.id}
@@ -103,10 +103,7 @@ class App extends Component {
       // handleSubmit={this.handleSubmit}
        />
     })}
-  </div>
-
-    
-
+    </div>
     <Footer />
     </div>
     )

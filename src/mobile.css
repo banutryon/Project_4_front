@@ -29,10 +29,17 @@
   }
 
   .navbar {
+    position: fixed;
+    top: 0;
     width: 100vw;
     height: 70px;
     background-color: #eaeaea;
     align-items: center;
+  }
+
+  summary {
+    height: 0;
+    width: 0;
   }
 
   .left-link {
@@ -68,7 +75,7 @@
 
   .homeImg {
     width: 100vw;
-    height: 120px;
+    height: 150px;
   }
 
   .map {
@@ -80,25 +87,25 @@
   }
 
   .img {
-    width: 300px;
+    width: 98vw !important;
     height: 200px;
   }
 
   .scrollBox {
-    width: 100vw;
+    width: 98vw;
     height: 500px;
-    margin: 10px 0 0 0;
+    margin: 10px 5px 0 5px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    overflow-x: hidden;
     border: 2px solid red;
   }
 
   .locations {
-    width: 100vw;
+    width: 98vw !important;
     margin: 10px 0px 10px 0px;
     display: block;
+    border: solid blue;
   }
 
   input {

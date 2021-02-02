@@ -24,6 +24,8 @@ a {
 a:active {
     cursor: grabbing;
 }
+
+@media only screen and (min-width: 600px) {
 // ========Nav Bar===============
 .link {
     list-style: none;
@@ -301,3 +303,4 @@ details summary:focus {
     list-style: none;
 }
 
+}

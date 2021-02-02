@@ -42,11 +42,18 @@ ul {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
     width: 100vw;
     height: 70px;
     background-color: $sg-white;
     align-items: center;
+    
 
+}
+summary {
+    height: 0; 
+    width: 0;
 }
 
 .left-link {
@@ -83,7 +90,7 @@ ul {
 // ================ Display Image ============ //
 .homeImg {
     width: 100vw;
-    height: 120px;
+    height: 150px;
 }
 
 
@@ -102,21 +109,21 @@ ul {
 
 // ================ Location box images ============ //
 .img {
-    width: 300px;
+    width: 98vw !important;
     height: 200px;
 }
 
 
 // ================ Scroll location box============ //
 .scrollBox {
-    width: 100vw;
+    width: 98vw;
     height: 500px;
-    margin: 10px 0 0 0;
+    margin: 10px 5px 0 5px;
     // padding: 1px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     border: 2px solid red;
 }
 
@@ -124,10 +131,11 @@ ul {
 
 // ================ Location box ============ //
 .locations {
-    width: 100vw;
+    width: 98vw !important;
     // height: 480px;
     margin: 10px 0px 10px 0px;
     display: block;
+    border: solid blue;
 }
 
 
