@@ -5,7 +5,7 @@ class Auth {
 
     login(callback) {
         this.authenticated = true;
-        callback()
+        callback ()
     }
 
     logout(callback) {

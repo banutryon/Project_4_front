@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './Map.css'
 import App from './App';
+import AboutMe from './components/AboutMe'
 // import Create from './components/Create'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App/>
+      <Route exact path="/about">
+        <AboutMe/>
+      </Route>
+      <Route path="/altliving">
+        <App/>
+      </Route>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
