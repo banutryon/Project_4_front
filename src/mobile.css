@@ -61,8 +61,8 @@
   }
 
   .createForm {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr;
     padding: 30px 0 0 3px;
   }
 
