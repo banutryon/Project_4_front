@@ -24,6 +24,8 @@ a {
 a:active {
     cursor: grabbing;
 }
+
+@media only screen and (min-width: 600px) {
 // ========Nav Bar===============
 .link {
     list-style: none;
@@ -55,6 +57,7 @@ a:active {
     height: 80px;
     padding: 0;
 }
+
 .navbar {
     position:fixed;
     top: 0;
@@ -300,3 +303,4 @@ details summary:focus {
     list-style: none;
 }
 
+}
