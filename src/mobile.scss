@@ -20,29 +20,66 @@ body {
 
 // ================ Nav bar ============ //
 .link {
+    list-style: none;
     width: 70px;
+    // padding: 5px;
+    margin: 0px
+}
+
+a {
+    text-decoration: none;
+    color: $sg-black;
+}
+
+a:active {
+    cursor: grabbing;
     
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar {
     width: 100vw;
-    height: 80px;
+    height: 70px;
     background-color: $sg-white;
+    align-items: center;
 
 }
 
 .left-link {
-    margin: 0
+    margin: 0 10px 0 0;
+    height: 20px;
+    
 }
 
 .right-link {
-    margin: 0
+    margin: 0 0 0 10px;
+}
+
+.logo {
+    margin-bottom: 15px;
+    width: 150px;
+    height: 60px;
 }
 
 .createDetails {
     width: 150px;
+    margin-bottom: 20px;
 }
 
+.createImg {
+    margin-top: 65px;
+    margin-left:60px;
+   
+}
+.createForm {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0 0 3px;
+}
 // ================ Display Image ============ //
 .homeImg {
     width: 100vw;
@@ -58,6 +95,7 @@ body {
     margin: 10px auto 0 auto;
     width: 100vw;
     height: 30vh;
+
     // border-radius: 10px;
 }
 
