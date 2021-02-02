@@ -5,7 +5,7 @@ import './Map.css'
 import App from './App';
 // import Create from './components/Create'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Switch } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 
 ReactDOM.render(
