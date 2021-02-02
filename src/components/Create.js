@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
+import Auth from '../Auth'
 
-export default class Create extends Component {
-    render() {
+export const Create = (props) => {
+    // render() {
         return (<>
             <details className="createDetails">
                             <summary><img 
@@ -11,7 +13,7 @@ export default class Create extends Component {
                                 <div className="grid-container">
                                 <form 
                                 className="createForm"
-                                onSubmit={this.props.handleSubmit}>
+                                onSubmit={props.handleSubmit}>
                                 
                                 <div className="grid-item">
                                 <label htmlFor="name">Name</label>
@@ -19,8 +21,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="name"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.name} /> 
+                                 onChange={props.handleChange}
+                                 value={props.state.name} /> 
                                  <br />
                                  </div>
 
@@ -30,8 +32,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="street"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.street} />
+                                 onChange={props.handleChange}
+                                 value={props.state.street} />
                                  <br />
                                  </div>
 
@@ -41,8 +43,8 @@ export default class Create extends Component {
                                   <input 
                                  type="text" 
                                  id="city"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.address} />
+                                 onChange={props.handleChange}
+                                 value={props.state.address} />
                                  <br />
                                  </div>
 
@@ -52,8 +54,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="state"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.state} /> 
+                                 onChange={props.handleChange}
+                                 value={props.state.state} /> 
                                  <br />
                                  </div>
 
@@ -63,8 +65,8 @@ export default class Create extends Component {
                                   <input 
                                  type="text" 
                                  id="zipcode"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.zipcode} />  
+                                 onChange={props.handleChange}
+                                 value={props.state.zipcode} />  
                                  <br />
                                  </div>
 
@@ -74,8 +76,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="lat"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.lat} /> 
+                                 onChange={props.handleChange}
+                                 value={props.state.lat} /> 
                                  <br />
                                  </div>
 
@@ -85,8 +87,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="lng"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.lng} /> 
+                                 onChange={props.handleChange}
+                                 value={props.state.lng} /> 
                                  <br />
                                  </div>
 
@@ -96,8 +98,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="img1"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.img1} />  
+                                 onChange={props.handleChange}
+                                 value={props.state.img1} />  
                                  <br />
                                  </div>
 
@@ -107,8 +109,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="img2"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.img2} />  
+                                 onChange={props.handleChange}
+                                 value={props.state.img2} />  
                                  <br />
                                  </div>
 
@@ -118,8 +120,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="img3"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.img3} />  
+                                 onChange={props.handleChange}
+                                 value={props.state.img3} />  
                                  <br />
                                  </div>
 
@@ -129,8 +131,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="description"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.description} />  
+                                 onChange={props.handleChange}
+                                 value={props.state.description} />  
                                  <br />
                                  </div>
 
@@ -140,8 +142,8 @@ export default class Create extends Component {
                                  <input 
                                  type="text" 
                                  id="price"
-                                 onChange={this.props.handleChange}
-                                 value={this.props.state.price} /> 
+                                 onChange={props.handleChange}
+                                 value={props.state.price} /> 
                                  <br />
                                  </div>
                                  
@@ -149,13 +151,21 @@ export default class Create extends Component {
                                  
                                  <button
                                   className="createButton"
-                                 value={this.props.state.id} 
-                                 onClick={this.props.handleSubmit}>
+                                 value={props.state.id} 
+                                 onClick={props.handleSubmit}>
                                 Create 
                                </button>
                                </div>
                         </details>
+                        <button
+                            onClick={()=>{
+                                Auth.logout(()=>{
+                                    props.history.push('/')
+                                })
+                            }}>Log Out</button>
         </>    
         )
-    }
+    // }
 }
+
+export default withRouter(Create)

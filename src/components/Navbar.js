@@ -1,9 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Create from './Create'
-import { Route } from 'react-router-dom'
+import { Route, withRouter, Switch } from 'react-router-dom'
+import Auth from '../Auth'
+import ProtectedRoute from '../Protected.route'
 
-class Navbar extends Component {
-    render = () => {
+export const Navbar = (props) => {
+    // render = () => {
         return (
             <nav className='navbar'>
                 <ul className='ul'>
@@ -65,7 +67,9 @@ class Navbar extends Component {
                                  <br />
                                  </div>
 
-                                 <div className="grid-item">
+                          ()=>{
+                return <Component {...props}/>
+            }       <div className="grid-item">
                                  <label htmlFor="zipcode">Zipcode</label>
                                  <br />
                                   <input 
@@ -127,12 +131,7 @@ class Navbar extends Component {
                                  type="text" 
                                  id="img3"
                                  onChange={this.props.handleChange}
-                                 value={this.props.state.img3} />  
-                                 <br />
-                                 </div>
-
-                                 <div className="grid-item">
-                                 <label htmlFor="description">Description</label>
+                          withRouter       <label htmlFor="description">Description</label>
                                  <br />
                                  <input 
                                  type="text" 
@@ -163,22 +162,30 @@ class Navbar extends Component {
                                </button>
                                </div>
                         </details> */}
-                        
-                        <Route exact path="/admin">
+                        <ProtectedRoute exact path="/admin">
                             <Create
-                                state={this.props.state} />
-                        </Route>
+                                state={props.state} />
+                        </ProtectedRoute>
                     </li> 
                     
                     <a href="https://pure-stream-81491.herokuapp.com/"><img className='logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
                 
-                    <li className='link aRight1'><a href='#'>Log in</a></li>
+                    <li className='link aRight1'>
+                        <a 
+                            href='#' 
+                            onClick={()=>{
+                                Auth.login(()=>{
+                                    props.history.push("/admin")
+                                })
+                            }}
+                            >Log in</a>
+                    </li>
                     <li className='link aRight2'><a href='#'>Sign Up</a></li>
                 </ul>
             </nav>
         )
-    }
+    // }
 }
 
 
-export default Navbar
+export default withRouter(Navbar)
