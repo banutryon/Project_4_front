@@ -129,25 +129,37 @@
 
 
 
-import  React, { useState } from 'react';
+import  React, { useState, useEffect } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps";
-import useSwr from "swr";
+// import useSwr from "swr";
+import axios from 'axios'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-const options = {
-    // styles: mapStyles,
-    disableDefaultUI: true,
-    zoomControl: true,
-}
+// import mapStyles from '../mapStyles'
+// const options = {
+//     styles: mapStyles,
+//     // disableDefaultUI: true,
+//     // zoomControl: true,
+// }
 
 const MyMap = () => {
 
 // load and format data
-const fetcher = (...args) => fetch(...args).then(response => response.json());
-const url = 'https://altliving.herokuapp.com/locations/'
-const {data, error} = useSwr(url, fetcher);
-const locations = data && !error ? data: [];
+const [locations, setlocations] = useState([])
+useEffect(() => {
+    // const fetcher = (...args) => fetch(...args).then(response => response.json());
+    // const url = 'https://altliving.herokuapp.com/locations/'
+    // const {data, error} = useSwr(url, fetcher);
+    // const locations = data && !error ? data: [];
+    axios
+        .get('https://altliving.herokuapp.com/locations/')
+        .then((response)=>{
+            setlocations(response.data)
+        })
+})
+
+
 const [selectedLocation, setSelectedLocation] = useState(null);
 const settings = {
     dots: true, 
@@ -176,10 +188,8 @@ const settings = {
                         lat: parseInt(location.lat),
                         lng: parseInt(location.lng)
                     }}
-                />
-                )
-            })}
-            {selectedLocation && (
+                >
+                  {selectedLocation && selectedLocation.id === location.id && (
                 <InfoWindow
                     onCloseClick={()=>{
                         setSelectedLocation(null)
@@ -188,24 +198,28 @@ const settings = {
                         lat: parseInt(selectedLocation.lat),
                         lng: parseInt(selectedLocation.lng)
                     }}
-                >
-                    <div>
-                        <h3>{selectedLocation.name}</h3>
+                    >
+                    <div className="infowindow">
+                        <h3 className="infowindow-name" style={{textAlign: "center"}}>{selectedLocation.name}</h3>
+                        <h4 style={{textAlign: "center"}}>{location.city},{location.state}</h4>
                         <Slider {...settings}>
                             <img className="mapimg" src={selectedLocation.img1} alt="images" />
                             <img className="mapimg" src={selectedLocation.img2} alt="images" />
                             <img className="mapimg" src={selectedLocation.img3} alt="images" />
                         </Slider>
+                        
+                        <div className="infowindow-price" style={{textAlign: "center", padding: "10%"}}>${selectedLocation.price}</div>
                     </div>
                 </InfoWindow>
-            )}
+                )}  
+                </Marker>
+                )
+            })}
         </GoogleMap>
     );
 }
 
 const WrappedMap = withScriptjs(withGoogleMap(MyMap));
-
-
 export const Map = () => {
     return (
         <div className="map">

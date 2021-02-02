@@ -3,7 +3,7 @@ import Location from './components/Location'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Map from './components/Map'
-
+import './create.css'
 
 
 
@@ -104,9 +104,6 @@ class App extends Component {
        />
     })}
     </div>
-
-    
-
     <Footer />
     </div>
     )
