@@ -1,0 +1,121 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: yellow;
+  }
+
+  .link {
+    list-style: none;
+    width: 70px;
+    margin: 0px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #2d2f32;
+  }
+
+  a:active {
+    cursor: grabbing;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    background-color: #eaeaea;
+    align-items: center;
+  }
+
+  summary {
+    height: 0;
+    width: 0;
+  }
+
+  .left-link {
+    margin: 0 10px 0 0;
+    height: 20px;
+  }
+
+  .right-link {
+    margin: 0 0 0 10px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+    width: 150px;
+    height: 60px;
+  }
+
+  .createDetails {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .createImg {
+    margin-top: 65px;
+    margin-left: 60px;
+  }
+
+  .createForm {
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 30px 0 0 3px;
+  }
+
+  .homeImg {
+    width: 100vw;
+    height: 150px;
+  }
+
+  .map {
+    float: none;
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .img {
+    width: 98vw !important;
+    height: 200px;
+  }
+
+  .scrollBox {
+    width: 98vw;
+    height: 500px;
+    margin: 10px 5px 0 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border: 2px solid red;
+  }
+
+  .locations {
+    width: 98vw !important;
+    margin: 10px 0px 10px 0px;
+    display: block;
+    border: solid blue;
+  }
+
+  input {
+    width: 150px;
+  }
+
+  .footer {
+    width: 100vw;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */
