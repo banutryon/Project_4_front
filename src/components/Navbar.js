@@ -35,11 +35,11 @@ class Navbar extends Component {
                                  value={this.props.state.street} />
                                  <br />
                                  
-                                 <label htmlFor="address">Address</label>
+                                 <label htmlFor="city">City</label>
                                  <br />
                                   <input 
                                  type="text" 
-                                 id="address"
+                                 id="city"
                                  onChange={this.props.handleChange}
                                  value={this.props.state.address} />
                                  <br />
@@ -108,7 +108,7 @@ class Navbar extends Component {
                                  value={this.props.state.img3} />  
                                  <br />
 
-                                 <label htmlFor="descrption">Description</label>
+                                 <label htmlFor="description">Description</label>
                                  <br />
                                  <input 
                                  type="text" 
