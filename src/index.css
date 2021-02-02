@@ -37,13 +37,13 @@ ul, .navbar {
 .navbar {
   width: 100vw;
   height: 80px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
 }
 
 .left-link {
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .right-link {
@@ -68,7 +68,6 @@ ul, .navbar {
 }
 
 .createDetails {
-  width: 430px;
   position: absolute;
   margin-right: 10px;
   z-index: 1;
@@ -77,7 +76,9 @@ ul, .navbar {
 .createForm {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px 0 0 3px;
+  width: 520px;
+  padding: 6 5px 0 0 3px;
+  margin-top: 20px;
 }
 
 label {
@@ -86,13 +87,38 @@ label {
 
 .createDetails input {
   width: 100px;
-  margin: 2px 40px 2px 5px;
-  background-color: rgba(255, 255, 255, 0.27);
+  height: 15px;
+  margin: 2px 5px 2px 5px;
+  background-color: rgba(255, 255, 255, 0.425);
+  display: block;
+  text-align: center;
 }
 
 .createButton {
-  display: block;
-  margin: 10px auto;
+  height: 50px;
+  margin: 60px 10px 0 0;
+  background-color: #88A5C1;
+  color: #eaeaea;
+  box-shadow: #959a92;
+  text-shadow: #107D3F;
+  border-radius: 10px;
+}
+
+.grid-container {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgba(25, 97, 25, 0.171);
+  border-radius: 10px;
+}
+
+.grid-item {
+  color: #eaeaea;
+  height: 40px;
+  padding: 2px;
+  font-size: 12px;
+  text-align: center;
+  margin: 2px;
 }
 
 .homeImg {
@@ -102,14 +128,14 @@ label {
 
 .map {
   float: right;
-  margin: 50px 50px 20px 0;
+  margin: 30px 50px 20px 0;
   vertical-align: center;
   width: 45vw;
-  height: 50vh;
+  height: 40vh;
 }
 
 .img {
-  width: 600px;
+  width: 30vw;
   height: 300px;
   border-radius: 10px;
 }
@@ -120,15 +146,15 @@ label {
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  width: 45vw;
-  height: 500px;
+  width: 50vw;
+  height: 400px;
 }
 
 .locations {
   display: block;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   height: 700px;
-  width: 760px;
+  width: 40vw;
   padding: 5px;
   background-color: rgba(72, 109, 94, 0.441);
   border-radius: 10px;

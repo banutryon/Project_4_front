@@ -46,7 +46,8 @@ class Location extends Component {
                         className="Edit"
                         src="https://cdn0.iconfinder.com/data/icons/glyphpack/19/edit-512.png" 
                         alt="edit icon" /></summary>
-                        <form 
+                        <form
+                        className ="editForm" 
                         id={this.props.location.id}
                         onSubmit={this.props.updateLocation}>
 
