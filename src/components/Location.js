@@ -24,7 +24,7 @@ class Location extends Component {
                         <img className="img" src={this.props.location.img3} alt="images" />
                     </Slider>
                     <div className="textbox">
-                        <h2>{this.props.location.name}</h2>
+                        <h1>{this.props.location.name}</h1>
                         <h2>{this.props.location.price}</h2>
                         <div className="textbox-flex">
                             <h3 className="flex-info">Street:</h3>
@@ -39,17 +39,18 @@ class Location extends Component {
                             <h3 className="flex-info">Zipcode: </h3>
                             <p className="flex-info">{this.props.location.zipcode}</p>
                         </div>   
-                        <p>Description: {this.props.location.description}</p>
+                        <p className="description">Description: {this.props.location.description}</p>
                     </div>
                     <details className="details">
                         <summary><img 
                         className="Edit"
                         src="https://cdn0.iconfinder.com/data/icons/glyphpack/19/edit-512.png" 
                         alt="edit icon" /></summary>
-                        <form 
+                        <form
+                        className ="editForm" 
                         id={this.props.location.id}
                         onSubmit={this.props.updateLocation}>
-
+                        <div className="editGrid">
                         <label htmlFor="name">Name</label>
                         <br />
                         <input 
@@ -157,9 +158,9 @@ class Location extends Component {
                         // defaultValue={this.props.location.description}
                         onChange={this.props.handleChange} />
                         <br />
-
+                        </div>
                         <input
-                        className="editButton"
+                        className="editButton update"
                         type="submit" 
                         value="Update Location" />
 
