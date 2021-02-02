@@ -4,10 +4,10 @@ class Navbar extends Component {
     render = () => {
         return (
             <nav className='navbar'>
-                <ul className='left-link'>
+                <ul className='ul'>
                 
-                    <li className='link'><a href='#'>Buy</a></li>
-                    <li className='link'><a href="#">About us</a></li>
+                    <li className='link aLeft1'><a href='#'>Buy</a></li>
+                    <li className='link aLeft2'><a href="#">About us</a></li>
                     <li className='create'>
                         <details className="createDetails">
                             <summary><img 
@@ -162,25 +162,12 @@ class Navbar extends Component {
                                </div>
                         </details>
                     </li> 
-                </ul>
-                <a href="https://pure-stream-81491.herokuapp.com/"><img className='logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
-                <ul className='right-link'>
-                  
-                    <li className='link'><a href='#'>Log in</a></li>
-                    <li className='link'><a href='#'>Sign Up</a></li>
                     
-                </ul>
+                    <a href="https://pure-stream-81491.herokuapp.com/"><img className='logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
                 
-
-
-             
-                {/* <div className='logout'>
-                    <h4>Logout</h4>
-                </div> */}
-
-                {/* <div className='create'>
-                    <h4>Make a listing</h4>
-                </div> */}
+                    <li className='link aRight1'><a href='#'>Log in</a></li>
+                    <li className='link aRight2'><a href='#'>Sign Up</a></li>
+                </ul>
             </nav>
         )
     }

@@ -5,10 +5,7 @@ $sg-green : #107D3F;
 $sg-blue    : #88A5C1;
 $sg-trueWhite : rgb(255, 255, 255);
 // =======Global=================
-html {
-    width:0;
-    
-}
+
 body {
     background-color: $sg-white;
     width: 100vw;
@@ -20,54 +17,68 @@ details {
 a:hover {
     color: $sg-green;
 }
-
-// ========Nav Bar===============
-.link {
-    list-style: none;
-    width: 140px;
-}
-
- a {
+a {
     text-decoration: none;
-    color: $sg-black;
+    color: $sg-black; 
 }
 a:active {
     cursor: grabbing;
 }
-ul {
+// ========Nav Bar===============
+.link {
+    list-style: none;
+    width: 60px;
+    margin: 5px; 
+}
+.aLeft1 {
+    margin-left: 20px;
+}
+
+.aLeft2 {
+    margin: 0  10% 0 5px;
+
+ }
+.aRight1 {
+    margin: 0  2% 0 10%;
+
+}
+.aRight2 {
+    margin-right: 30px;
+
+}
+.ul {
     display: flex;
     flex-direction: row;
-}
-.navbar {
-   @extend ul;
-    width: 100vw;
-    height: 80px;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    height: 80px;
+    padding: 0;
+}
+.navbar {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
     background-color: $sg-trueWhite;
+    
 }
-.left-link {
-    margin-left:10px;
-}
-.right-link {
-    margin-right: 30px;
-}
+
 .logo {
-    margin-top: 15px;
     width: 200px;
     height: 80px;
+    margin: 30px auto 15px -50%;
 }
 //=========== create form in navbar==========
-
 .create {
     list-style-type: none;
-    margin: -10px 0 0 0;
+    margin: -60px 50px 0 10px;
 }
 
 .createImg {
-    height: 35px;
-    width: 35px;
-    margin-bottom: 20px;
+    height: 25px;
+    width: 25px;
+    margin: 18px 0 0 -100px;
 }
 .createDetails{
     position: absolute;
@@ -78,39 +89,42 @@ ul {
     display: flex;
     flex-wrap: wrap;
     width: 520px;
-    padding:6 5px 0 0 3px;
-    margin-top: 20px;
+    margin: 5px 0;
+    
 }
 label {
     text-align: left;
+    width: 60px;
 }
 .createDetails input{
-    width: 100px;
+    width: 150px;
     height: 15px;
-    margin: 2px 5px 2px 5px;
+    margin: 2px;
     background-color: rgba(255, 255, 255, 0.425);
     display: block;
     text-align: center;
+    border: $sg-white;
 }
 .createButton {
     height: 50px;
-    margin: 60px 10px 0 0;
-    background-color: $sg-blue;
+    margin: 65px 20px 0 0;
+    background-color: $sg-green;
     color: $sg-white;
-    box-shadow: $sg-grey;
-    text-shadow: $sg-green;
+    box-shadow: 2px 2px 2px 2px rgba(94, 104, 95, 0.551);
+    border:none;
     border-radius: 10px;
 }
 .grid-container {
     display: grid;
-    margin-top: 10px;
+    margin: 30px 0 0 -200px;
     grid-template-columns: auto auto auto auto;
     background-color: rgba(25, 97, 25, 0.171);
     border-radius: 10px;
+    
   }
   .grid-item {
     color:$sg-white;
-    height: 40px;
+    height: 30px;
     padding: 2px;
     font-size: 12px;
     text-align: center;
@@ -129,48 +143,51 @@ label {
 
 .map {
     float: right;
-    margin: 30px 50px 20px 0;
+    margin: 50px 50px 20px 0;
     vertical-align: center;
-    width: 45vw;
-    height: 40vh;
+    width: 55%;
+    height: 55vh;
+    box-shadow: 0 0 15px 0 $sg-blue;
+
 }
 // ============location box images=================
 
 .img { 
-    width: 30vw;
-    height: 300px;
+    width: 100% !important;
+    height: 25vh;
     border-radius: 10px;
 }
 
 // ===========Scroll box for locatios box=======
 .scrollBox {
-    margin: 20px;
+    margin: 50px auto 0 auto;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
-    width: 50vw;
-    height: 400px;
-    // border: 1px solid green;
-
+    width: 35%;
+    height: 55vh;
+    box-shadow: 0 0 15px 0 $sg-blue;
 }
-
+.scrollBox div {
+    width: 34vw;
+}
 // ============location box=================
 .locations {
     display: block;
-    margin: 0 auto 20px auto;
-    height: 700px;
-    width: 40vw;
+    margin: 0 auto 30px auto;
+    height: 460px;
+    width: 46vw;
     padding: 5px;
     background-color:rgba(72, 109, 94, 0.441) ;
-    border-radius: 10px;
-    
+    box-shadow: 1px 1px 5px 1px $sg-blue;
+
 }
 .slides {
   position: relative;
 }
 .slick-dots {
-    margin-bottom: -15px;
+    margin-bottom: -10px;
     bottom: 0;
 }
 .slides .slick-prev,
@@ -193,33 +210,49 @@ label {
     background-color:$sg-white ;
     text-align: center;
     margin-top: 25px;
-    padding: 5px;
-    border-radius: 5px;
+    width: 46vw;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+h2 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
 }
 .textbox-flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: between;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     border: 1px solid rgba(255, 255, 255, 0);
 } 
 .flex-info {
-    width: 150px;
+    width: 60px;
     margin: 5px 10px;
     text-align: left;
+    font-size: 12px;
 }
-
+.description {
+    margin: 10px;
+    font-size: 10px;
+}
 .details {
     list-style-type: none;
     text-decoration:none;
-    background-color:rgba(121, 133, 117, 0.126);
+    background-color:rgba(8, 45, 8, 0.619);
     text-align: center;
-    padding: 10px;
-    
+    padding: 10px; 
+    position: relative;
+    z-index: 5;
+    border-radius: 10px;
 }
 input {
-    width: 500px;
-    height: 20px;
+    width: 15vw;
+    height: 12px;
+    margin: 2.5px;
+}
+label {
+    margin-left: 10px;
 }
 details summary::-webkit-details-marker {
     display:none;
@@ -228,7 +261,7 @@ details summary:focus {
     outline: none;
   }
 .editButton {
-    margin: 5px;
+    font-size: 12px;
     width: 150px;
     height: 25px;
 }
@@ -239,23 +272,31 @@ details summary:focus {
     margin: auto;
     padding: 2px;
 }
+.editForm {
+    font-size: 12px;
+    color: $sg-white;
+    margin: 2px;
+}
+.editGrid {
+    display: grid;
+    grid-template-columns: 2px auto auto auto;
 
+}
 // =========footer========
 .footer {
-    position: fixed;
+    position:fixed;
+    bottom: 0;
     height: 80px;
     text-align: center;
-    width: 100vw;
-    margin-top: 50px;
-    // background-color: $sg-white;
-    background-color: $sg-blue;
-    
+    width: 100%;
+    margin-top: 5px;
+    background-color: $sg-blue;    
 }
 .footer ul {
-    padding: 0 10px;
     display: flex;
     justify-content: space-around;
 }
 .footer li {
     list-style: none;
 }
+
