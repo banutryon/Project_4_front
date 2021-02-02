@@ -1,17 +1,9 @@
-import React, {Component} from 'react'
-import Create from './Create'
-import { Route } from 'react-router-dom'
+import React, { Component } from 'react'
 
-class Navbar extends Component {
-    render = () => {
-        return (
-            <nav className='navbar'>
-                <ul className='ul'>
-                
-                    <li className='link aLeft1'><a href='#'>Buy</a></li>
-                    <li className='link aLeft2'><a href="#">About us</a></li>
-                    <li className='create'>
-                        {/* <details className="createDetails">
+export default class Create extends Component {
+    render() {
+        return (<>
+            <details className="createDetails">
                             <summary><img 
                                 className="createImg"
                                 src="https://lh3.googleusercontent.com/tzAcogOtr6ASgImIZ3VgwXGtpGyGMHeiZdQ4sz_WozasKt6pTmI2_ZDn44xE5LUMDI5tLBydaCFcrreeK8JIlKwbe51UXmlkZvXwfrsvsYiqnS1yuAlh4oAnQxYG10rojNOH7oXI0Do=w2400" 
@@ -162,23 +154,8 @@ class Navbar extends Component {
                                 Create 
                                </button>
                                </div>
-                        </details> */}
-                        
-                        <Route exact path="/admin">
-                            <Create
-                                state={this.props.state} />
-                        </Route>
-                    </li> 
-                    
-                    <a href="https://pure-stream-81491.herokuapp.com/"><img className='logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
-                
-                    <li className='link aRight1'><a href='#'>Log in</a></li>
-                    <li className='link aRight2'><a href='#'>Sign Up</a></li>
-                </ul>
-            </nav>
+                        </details>
+        </>    
         )
     }
 }
-
-
-export default Navbar
