@@ -87,7 +87,7 @@
   }
 
   .img {
-    width: 98vw !important;
+    width: 98vw;
     height: 200px;
   }
 
@@ -102,10 +102,29 @@
   }
 
   .locations {
-    width: 98vw !important;
+    width: 98vw;
     margin: 10px 0px 10px 0px;
     display: block;
     border: solid blue;
+  }
+
+  .Edit {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    padding: 2px;
+  }
+
+  .details {
+    list-style-type: none;
+    text-decoration: none;
+    background-color: rgba(8, 45, 8, 0.619);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 5;
+    border-radius: 10px;
   }
 
   input {

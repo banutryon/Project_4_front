@@ -48,8 +48,6 @@ ul {
     height: 70px;
     background-color: $sg-white;
     align-items: center;
-    
-
 }
 summary {
     height: 0; 
@@ -109,7 +107,7 @@ summary {
 
 // ================ Location box images ============ //
 .img {
-    width: 98vw !important;
+    width: 98vw;
     height: 200px;
 }
 
@@ -131,7 +129,7 @@ summary {
 
 // ================ Location box ============ //
 .locations {
-    width: 98vw !important;
+    width: 98vw;
     // height: 480px;
     margin: 10px 0px 10px 0px;
     display: block;
@@ -139,7 +137,23 @@ summary {
 }
 
 
-
+.Edit {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    padding: 2px;
+}
+.details {
+    list-style-type: none;
+    text-decoration:none;
+    background-color:rgba(8, 45, 8, 0.619);
+    text-align: center;
+    padding: 10px; 
+    position: relative;
+    z-index: 5;
+    border-radius: 10px;
+}
 // ================ Text box ============ //
 input {
     width: 150px;
