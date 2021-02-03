@@ -31,12 +31,14 @@ export default class AboutMe extends Component {
                             </div>
                             <div className="about-card">
                                 <span className="about-card-title">Technologies Used</span>
-                                <img className="techlogo" src="logo192.png" alt=""/>
-                                <img className="techlogo" src="ruby.png" alt=""/>
-                                <img className="techlogo" src="rails.png" alt=""/>
+                                <a className="alogo" href="https://reactjs.org/docs/getting-started.html"><img className="techlogo" src="logo192.png" alt=""/></a>
+                                <a className="alogo" href="https://ruby-doc.org/"><img className="techlogo" src="ruby.png" alt=""/></a>
+                                <a className="alogo" href="https://guides.rubyonrails.org/"><img className="techlogo" src="rails.png" alt=""/></a>
                             </div>
                         </div>
                     </div>
+                    <h3>Personal Brand Statement</h3>
+
                     <div className="dev-container">
                         <div className="bioCont">
                             <a href="https://www.linkedin.com/in/tryon-experiences/"><span className="name">Banu Tryon: </span></a>
