@@ -2,8 +2,8 @@ In our project, we decided to create a site focused on alternative living option
 
 
 
-Banu: My contribution to this project:
-###Backend: 
+### Banu: My contribution to this project:
+Backend: 
 -Created and built out these files: 
 -routes.rb
 -locations_controllers.rb
@@ -26,10 +26,10 @@ Other tasks I completed:
 
 
 
-###Drew:
+### Drew:
 
 
-###Ryan: 
+### Ryan: 
 My responsibility was primarily to construct and maintain the backend. I used ran migrations to 
 update our schema, I assured that our models were working properly. I also added routes and a controller for seller data, and for feedback, which we did not end up using but would like to implement these in the future. I also deployed the backend to heroku, which was a bit of a challenge as I could not get the migrations to run on heroku, and I had to hard code our tables into the database.
 
