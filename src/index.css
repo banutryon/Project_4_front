@@ -1,6 +1,7 @@
 body {
   background-color: #eaeaea;
   width: 100vw;
+  margin: 0px;
 }
 
 details {
@@ -28,19 +29,12 @@ a:active {
   }
 
   .aLeft1 {
-    margin-left: 20px;
+    position: relative;
+    margin-left: 10%;
   }
 
   .aLeft2 {
     margin: 0 10% 0 5px;
-  }
-
-  .aRight1 {
-    margin: 0 2% 0 10%;
-  }
-
-  .aRight2 {
-    margin-right: 30px;
   }
 
   .ul {
@@ -62,9 +56,10 @@ a:active {
   }
 
   .logo {
-    width: 200px;
+    width: 350px;
     height: 80px;
-    margin: 30px auto 15px -50%;
+    margin: 30px auto 10px -50%;
+    z-index: 1;
   }
 
   .create {
@@ -75,7 +70,7 @@ a:active {
   .createImg {
     height: 25px;
     width: 25px;
-    margin: 18px 0 0 -100px;
+    margin-top: 18px;
   }
 
   .createDetails {
@@ -118,7 +113,9 @@ a:active {
 
   .grid-container {
     display: grid;
-    margin: 30px 0 0 -200px;
+    text-align: center;
+    width: 600px;
+    margin: 30px 0 0 -600px;
     grid-template-columns: auto auto auto auto;
     background-color: rgba(25, 97, 25, 0.171);
     border-radius: 10px;
@@ -135,7 +132,7 @@ a:active {
 
   .homeImg {
     width: 100vw;
-    height: 250px;
+    height: 260px;
   }
 
   .map {
@@ -171,7 +168,7 @@ a:active {
   .locations {
     display: block;
     margin: 0 auto 50px auto;
-    height: 460px;
+    height: 500px;
     width: 46vw;
     padding: 5px;
     background-color: rgba(72, 109, 94, 0.441);
@@ -217,7 +214,7 @@ a:active {
 
   h2 {
     font-size: 16px;
-    margin: 0 0 5px 0;
+    margin: 5px 0 5px 0;
   }
 
   .textbox-flex {
@@ -227,7 +224,7 @@ a:active {
   }
 
   .flex-info {
-    width: 60px;
+    width: 100px;
     margin: 5px 10px;
     text-align: left;
     font-size: 12px;

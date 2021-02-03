@@ -9,7 +9,14 @@ export const Navbar = (props) => {
         return (
             <nav className='navbar'>
                 <ul className='ul'>
-                    <li className='link aLeft1'><a href='#'>Buy</a></li>
+                    <li className='link aLeft1'><a 
+                        href='' 
+                        onClick={()=>{
+                                Auth.login(()=>{
+                                    props.history.push("/altliving/admin")
+                                })
+                            }}
+                            >Log in</a></li>
                     <li className='link aLeft2'><a href="/about">About us</a></li>
                     
                     
@@ -169,14 +176,7 @@ export const Navbar = (props) => {
                         </details>
                     </li> */}
                     <li className='link aRight1'>
-                        <a 
-                        href='' 
-                        onClick={()=>{
-                                Auth.login(()=>{
-                                    props.history.push("/altliving/admin")
-                                })
-                            }}
-                            >Log in</a>
+                    <a href='#'>Buy</a>  
                     </li>
                     <li className='create'>
                         <ProtectedRoute exact path="/admin">

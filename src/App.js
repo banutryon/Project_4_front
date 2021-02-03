@@ -81,7 +81,7 @@ class App extends Component {
 
   render = () => {
     return (
-    <div>
+    <div className="all">
       <Route exact path="/altliving">
         <Navbar 
           state={this.state}
