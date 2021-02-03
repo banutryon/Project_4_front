@@ -233,7 +233,7 @@ label {
 // ================ Location box ============ //
 .locations {
     width: 96%;
-    height: 500px;
+    height: 550px;
     margin: 10px auto 10px auto;
     display: block;
     padding: 5px;
@@ -313,10 +313,9 @@ h2 {
     background-color:rgba(8, 45, 8, 0.619);
     text-align: center;
     padding: 20px;
-    margin-bottom: 10px; 
+    margin: 0; 
     position: relative;
     z-index: 5;
-
     border-radius: 10px;
 }
 
@@ -331,19 +330,17 @@ label {
     margin-top: 5px;
 }
 
-.Btn{
-    width: 20px;
-    height: 20px;
-    display: block;
-    margin: auto !important;
-    padding: 4px;
-   
+.Edit {
+    width: 30px;
+    height: 30px;
+    margin: -18px 0 30px 150px;
+    padding: 2px;
 }
 
 .editForm {
     font-size: 12px;
     color: white;
-    margin: 2px;
+    margin: 20px 10px 10px 10px;
 }
 
 
