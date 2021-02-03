@@ -9,18 +9,30 @@ $sg-trueWhite : rgb(255, 255, 255);
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
+
 * {
     margin: 0;
     padding: 0;
 }
-
 body {
-    background-color: yellow;
+   margin: 0;
+   background-color: $sg-white;
+   width: 100vw;
+
 }
 
 details {
     cursor: pointer;
+    
 }
+
+details summary::-webkit-details-marker {
+    display:none;
+  }
+
+details summary:focus {
+    outline: none;
+  }
 
 // ================ Nav bar ============ //
 .link {
@@ -40,9 +52,12 @@ a:active {
     
 }
 
-ul {
+.ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
 }
 
 .navbar {
@@ -51,44 +66,121 @@ ul {
     width: 100vw;
     height: 70px;
     background-color: $sg-white;
-    align-items: center;
+   
 }
 summary {
     height: 0; 
     width: 0;
 }
 
-.left-link {
-    margin: 0 10px 0 0;
-    height: 20px;
-    
+.aLeft1 {
+    margin: 0 10px 0 10px;
+    height: 20px;  
 }
 
-.right-link {
-    margin: 0 0 0 70px;
+.aLeft2 {
+    margin: 0 0 0 10px;
+}
+
+.aRight1 {
+    width: 40px;
+}
+
+.aRight2 {
+
 }
 
 .logo {
-    margin-bottom: 15px;
+    margin: 10px auto 10px 0;
     width: 150px;
     height: 60px;
 }
+.create {
+    list-style-type: none;
+    margin: -16px 30px 0 5px;
+}
 
 .createDetails {
-    width: 150px;
+    position: absolute;
+    z-index: 1;
+    // width: 150px;
+    margin-right: 10px;
     margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.createDetails input {
+    width: 80px;
+    height: 10px;
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.555);
+    display: block;
+    text-align: center;
+    border: $sg-white;
+
+}
+
+.createButton {
+    cursor: pointer;
+    border-radius: 5px;
+    color:$sg-white;
+    background-color: $sg-green;
+    height: 20px;
+    width: 50px;
+    margin: 40px 20px 0 0;
+    font-size: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(94, 104, 95, 0.551);
+    text-align: center;
+  
+    
+
+}
+
+.createButton:active {
+    cursor:grabbing;
+
+}
+
+.grid-container {
+    display: grid;
+    text-align: center;
+    width: 350px;
+    margin: 35px 0 0 -350px;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgba(25, 97, 25, 0.171);
+    border-radius: 10px;
+    
+}
+
+.grid-item {
+    color: white;
+    height: 15px;
+    padding: 1px;
+    font-size: 8px;
+    // text-align: center;
+    margin: 2px;
 }
 
 .createImg {
-    margin-top: 65px;
-    margin-left:60px;
+    height: 15px;
+    width: 15px;
+    
+    margin-bottom: 20px;
+    // margin-left: 0px;
    
 }
 .createForm {
-    display: grid;
-    grid-template-rows: 1fr;;
-    padding: 30px 0 0 3px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 5px 0;
 }
+
+label {
+    text-align: left;
+    width: 60px;
+}
+
 // ================ Display Image ============ //
 .homeImg {
     width: 100vw;
@@ -103,7 +195,7 @@ summary {
     display: block;
     margin: 10px auto 0 auto;
     width: 100vw;
-    height: 30vh;
+    height: 25vh;
 
     border-radius: 10px;
 }
@@ -111,25 +203,28 @@ summary {
 
 // ================ Location box images ============ //
 .img {
-    width: 98vw;
+    width: 100%;
     height: 200px;
-    margin: 10px 5px 5px 5px;
+    // margin: 10px 5px 5px 5px;
     border-radius: 10px;
 }
 
 
 // ================ Scroll location box============ //
 .scrollBox {
-    width: 98vw;
-    height: 500px;
-    margin: 10px 5px 0 5px;
+    width: 100vw;
+    height: 300px;
+    margin: 10px auto 0 auto;
     // padding: 1px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
-    border: 2px solid red;
+    box-shadow: 0 0 15px 0 $sg-blue;
+    
 }
+
+
 
 
 
@@ -137,13 +232,14 @@ summary {
 
 // ================ Location box ============ //
 .locations {
-    width: 98vw;
-    // height: 480px;
-    margin: 10px 0px 10px 0px;
+    width: 96%;
+    height: 500px;
+    margin: 10px auto 10px auto;
     display: block;
+    padding: 5px;
     background-color:rgba(72, 109, 94, 0.441) ;
     box-shadow: 1px 1px 5px 1px $sg-blue;
-    border: solid blue;
+    // border: solid blue;
 }
 
 .slides {
@@ -151,7 +247,8 @@ summary {
 }
 
 .slick-dots {
-    margin-top: 10px;
+    margin-bottom: -10px;
+    
     
 }
 
@@ -175,14 +272,21 @@ summary {
 .textbox {
     background-color: $sg-white;
     text-align: center;
-    margin: 10px 5px 25px 5px;
+    
+    margin-top: 25px ;
     // width: 46vw;
     border-radius: 10px;
+
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 16px;
     // margin-bottom: 150px;
+}
+
+h2 {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
 .textbox-flex {
@@ -198,72 +302,86 @@ h1 {
     font-size: 12px;
 }
 
-// .description {
-//     // margin-bottom: 100px;
-//     font-size: 10px;
-// }
-
-// .details {
-//     list-style-type: none;
-//     text-decoration:none;
-//     background-color:rgba(8, 45, 8, 0.619);
-//     text-align: center;
-//     padding: 10px; 
-//     position: relative;
-//     z-index: 5;
-//     border-radius: 10px;
-// }
-.editButton {
-    font-size: 6px;
-    width: 20px;
-    height: 5px;
+.description {
+    margin: 10px;
+    font-size: 10px;
 }
 
-.Edit {
+.details {
+    list-style-type: none;
+    text-decoration:none;
+    background-color:rgba(8, 45, 8, 0.619);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px; 
+    position: relative;
+    z-index: 5;
+
+    border-radius: 10px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+.editButton {
+    font-size: 6px;
+    width: 100px;
+    height: 25px;
+    margin-top: 5px;
+}
+
+.Btn{
     width: 20px;
     height: 20px;
     display: block;
-    margin: auto;
-    padding: 2px;
-    margin: -40px 10px 10px 225px;
+    margin: auto !important;
+    padding: 4px;
+   
 }
 
-
-
-// .textbox {
-//     background-color: $sg-white;
-//     text-align: center;
-//     margin-bottom: 5px;
-//     // width: 46vw;
-//     border-radius: 10px;
-// }
+.editForm {
+    font-size: 12px;
+    color: white;
+    margin: 2px;
+}
 
 
 
 input {
-    width: 5px;
+    width: 45vw;
 }
 
 
 
 // ================ Footer ============ //
 .footer {
-    // position:fixed;
+    position:fixed;
+    bottom: 0;
+    height: 60px;
     width: 100%;
     font-size: 12px;
-    list-style-type: none;
-    word-spacing: 2px ;
-    padding: 0;
-    // font-size: 14px;
+    // list-style-type: none; 
+    // word-spacing: 2px ;
+    padding: 5px;
     text-align: center;
     margin-top: 5px;
     background-color: $sg-blue;    
 }
 
 .footer ul {
-
+    display: flex;
+    justify-content: space-around;
 }
 
+.footer li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.footer p {
+    font-size: 8px;
+}
 
 
 
