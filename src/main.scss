@@ -12,9 +12,7 @@ body {
     margin: 0px;
 }
 
-details {
-    cursor: pointer;
-}
+
 a:hover {
     color: $sg-green;
 }
@@ -42,14 +40,7 @@ a:active {
     margin: 0  10% 0 5px;
 
  }
-.aRight1 {
-    
 
-}
-// .aRight2 {
-//     margin-right: 30px;
-
-// }
 .ul {
     display: flex;
     flex-direction: row;
@@ -119,6 +110,12 @@ label {
     box-shadow: 2px 2px 2px 2px rgba(94, 104, 95, 0.551);
     border:none;
     border-radius: 10px;
+    cursor: pointer;
+    
+}
+.createButton:active {
+    cursor: grabbing;
+  
 }
 .grid-container {
     display: grid;
@@ -183,12 +180,13 @@ label {
 // ============location box=================
 .locations {
     display: block;
-    margin: 0 auto 50px auto;
+    margin: 10px auto 50px auto;
     height: 500px;
     width: 46vw;
     padding: 5px;
     background-color:rgba(72, 109, 94, 0.441) ;
     box-shadow: 1px 1px 5px 1px $sg-blue;
+    border-radius: 10px;
 
 }
 .slides {
@@ -196,7 +194,7 @@ label {
 }
 .slick-dots {
     margin-bottom: -10px;
-    bottom: 0;
+    
 }
 .slides .slick-prev,
 .slides .slick-next {
@@ -227,7 +225,7 @@ h1 {
 }
 h2 {
     font-size: 16px;
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
 }
 .textbox-flex {
     display: grid;
