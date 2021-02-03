@@ -31,7 +31,45 @@ Other tasks I completed:
 
 
 #### Drew:
+Frontend:
+Create and build out 
+-  Footer.js
+-  Navbar.js
+- Seed.rb
+-  make logo onto imgur
+-  push it up as a logo img
+Make mobile conversion
+-  get the line
+-  make similar to original
+-  center create menu
+-   make header stable
+-  make footer stable 
+-  make sure map is stable and centered
+-  Footer
+-  Nav
+-  Cards
+-  Map
+Component
+Nav Bar
+-  log in 
+-  log out - rendar on login
+-  about us
+-  logo
+-  create icon - admin access only "only render when admin"
+-  build layout
+Design Figma
+-  Header
+- Footer 
+-  main body
+ -  continue to update
+-  1st draft
+-  2nd draft with hamburger menu
+- create button
+Backend:
+- seed data for listings
 
+
+Create the Create new location in the nav bar
 
 #### Ryan: 
 My responsibility was primarily to construct and maintain the backend. I used ran migrations to 
