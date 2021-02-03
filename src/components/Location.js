@@ -25,7 +25,7 @@ class Location extends Component {
                     </Slider>
                     <div className="textbox">
                         <h1>{this.props.location.name}</h1>
-                        <h2>{this.props.location.price}</h2>
+                        <h2>$ {this.props.location.price}</h2>
                         <div className="textbox-flex">
                             <h3 className="flex-info">Street:</h3>
                             <p className="flex-info">{this.props.location.street}</p>

@@ -9,8 +9,9 @@ $sg-trueWhite : rgb(255, 255, 255);
 body {
     background-color: $sg-white;
     width: 100vw;
-
+    margin: 0px;
 }
+
 details {
     cursor: pointer;
 }
@@ -33,7 +34,8 @@ a:active {
     margin: 5px; 
 }
 .aLeft1 {
-    margin-left: 20px;
+    position: relative;
+    margin-left: 10%;
 }
 
 .aLeft2 {
@@ -41,13 +43,13 @@ a:active {
 
  }
 .aRight1 {
-    margin: 0  2% 0 10%;
+    
 
 }
-.aRight2 {
-    margin-right: 30px;
+// .aRight2 {
+//     margin-right: 30px;
 
-}
+// }
 .ul {
     display: flex;
     flex-direction: row;
@@ -68,9 +70,10 @@ a:active {
 }
 
 .logo {
-    width: 200px;
+    width: 350px;
     height: 80px;
-    margin: 30px auto 15px -50%;
+    margin: 30px auto 10px -50%;
+    z-index: 1;
 }
 //=========== create form in navbar==========
 .create {
@@ -81,7 +84,7 @@ a:active {
 .createImg {
     height: 25px;
     width: 25px;
-    margin: 18px 0 0 -100px;
+    margin-top: 18px;
 }
 .createDetails{
     position: absolute;
@@ -119,7 +122,9 @@ label {
 }
 .grid-container {
     display: grid;
-    margin: 30px 0 0 -200px;
+    text-align: center;
+    width: 600px;
+    margin: 30px 0 0 -600px;
     grid-template-columns: auto auto auto auto;
     background-color: rgba(25, 97, 25, 0.171);
     border-radius: 10px;
@@ -137,7 +142,7 @@ label {
 // =============Display image==========
 .homeImg {
     width: 100vw;
-    height: 250px;
+    height: 260px;
 
 }
 
@@ -178,8 +183,8 @@ label {
 // ============location box=================
 .locations {
     display: block;
-    margin: 0 auto 30px auto;
-    height: 460px;
+    margin: 0 auto 50px auto;
+    height: 500px;
     width: 46vw;
     padding: 5px;
     background-color:rgba(72, 109, 94, 0.441) ;
@@ -222,7 +227,7 @@ h1 {
 }
 h2 {
     font-size: 16px;
-    margin: 0 0 5px 0;
+    margin: 5px 0 5px 0;
 }
 .textbox-flex {
     display: grid;
@@ -230,7 +235,7 @@ h2 {
     border: 1px solid rgba(255, 255, 255, 0);
 } 
 .flex-info {
-    width: 60px;
+    width: 100px;
     margin: 5px 10px;
     text-align: left;
     font-size: 12px;
@@ -244,7 +249,8 @@ h2 {
     text-decoration:none;
     background-color:rgba(8, 45, 8, 0.619);
     text-align: center;
-    padding: 10px; 
+    padding: 10px;
+    margin-bottom: 20px; 
     position: relative;
     z-index: 5;
     border-radius: 10px;

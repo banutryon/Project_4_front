@@ -3,11 +3,10 @@ import Location from './components/Location'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Map from './components/Map'
-import './create.css'
-
-
-
 import axios from 'axios'
+import Create from './components/Create'
+import ProtecedRoute from './Protected.route'
+import { Route, Switch } from 'react-router-dom'
 
 class App extends Component {
   state = {
@@ -82,29 +81,36 @@ class App extends Component {
 
   render = () => {
     return (
-    <div>
-      <Navbar 
-      state={this.state}
-      handleChange={this.handleChange}
-      handleSubmit={this.handleSubmit}
-      />
+    <div className="all">
+      <Route exact path="/altliving">
+        <Navbar 
+          state={this.state}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}/>
+      </Route>
       
+      <ProtecedRoute exact path="/altliving/admin">
+        <Create 
+          state={this.state}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}/>
+      </ProtecedRoute>
+
+
       <img className="homeImg" src="https://images.unsplash.com/photo-1596135811068-0daf0b1e3b3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1692&q=80" alt='HomeImg'/>
-      
-      
-    <Map />
-    <div className="scrollBox">
-    {this.state.locations.map((location) => {
-      return <Location key={location.id}
-      location={location}
-      updateLocation={this.updateLocation}
-      deleteLocation={this.deleteLocation}
-      handleChange={this.handleChange}
-      // handleSubmit={this.handleSubmit}
-       />
-    })}
-    </div>
-    <Footer />
+      <Map />
+      <div className="scrollBox">
+      {this.state.locations.map((location) => {
+        return <Location key={location.id}
+        location={location}
+        updateLocation={this.updateLocation}
+        deleteLocation={this.deleteLocation}
+        handleChange={this.handleChange}
+        // handleSubmit={this.handleSubmit}
+        />
+      })}
+      </div>
+      <Footer />
     </div>
     )
   }
