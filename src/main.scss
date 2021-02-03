@@ -97,7 +97,7 @@ label {
     width: 150px;
     height: 15px;
     margin: 2px;
-    background-color: rgba(255, 255, 255, 0.425);
+    background-color: rgba(255, 255, 255, 0.753);
     display: block;
     text-align: center;
     border: $sg-white;
@@ -121,9 +121,9 @@ label {
     display: grid;
     text-align: center;
     width: 600px;
-    margin: 30px 0 0 -600px;
+    margin: 50px 0 0 -600px;
     grid-template-columns: auto auto auto auto;
-    background-color: rgba(25, 97, 25, 0.171);
+    background-color: rgba(16, 43, 16, 0.674);
     border-radius: 10px;
     
   }
@@ -139,7 +139,7 @@ label {
 // =============Display image==========
 .homeImg {
     width: 100vw;
-    height: 260px;
+    height: 280px;
 
 }
 
