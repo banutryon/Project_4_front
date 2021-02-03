@@ -46,7 +46,7 @@ class Create extends Component {
 
                                  <div className="grid-item">
                                  <label htmlFor="city">City</label>
-                                 <br />ltliving
+                                 <br />
                                   <input 
                                  type="text" 
                                  id="city"
