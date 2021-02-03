@@ -52,7 +52,7 @@
   }
 
   .right-link {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 70px;
   }
 
   .logo {
@@ -88,6 +88,7 @@
     margin: 10px auto 0 auto;
     width: 100vw;
     height: 30vh;
+    border-radius: 10px;
   }
 
   .img {
@@ -122,7 +123,7 @@
   }
 
   .slick-dots {
-    bottom: 0;
+    margin-top: 10px;
   }
 
   .slides .slick-prev,
@@ -143,7 +144,7 @@
   .textbox {
     background-color: #eaeaea;
     text-align: center;
-    margin-bottom: 5px;
+    margin: 10px 5px 25px 5px;
     border-radius: 10px;
   }
 
@@ -164,12 +165,19 @@
     font-size: 12px;
   }
 
+  .editButton {
+    font-size: 6px;
+    width: 20px;
+    height: 5px;
+  }
+
   .Edit {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     display: block;
     margin: auto;
     padding: 2px;
+    margin: -40px 10px 10px 225px;
   }
 
   input {
@@ -177,8 +185,14 @@
   }
 
   .footer {
-    width: 100vw;
+    width: 100%;
+    font-size: 12px;
+    list-style-type: none;
+    word-spacing: 2px;
     padding: 0;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #88A5C1;
   }
 }
 
