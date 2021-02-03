@@ -1,0 +1,310 @@
+$sg-grey   : rgb(149, 154, 146);
+$sg-black  : #2d2f32;
+$sg-white  : #eaeaea;
+$sg-green : #107D3F;
+$sg-blue    : #88A5C1;
+$sg-trueWhite : rgb(255, 255, 255);
+// =======Global=================
+
+body {
+    background-color: $sg-white;
+    width: 100vw;
+    margin: 0px;
+}
+
+
+a:hover {
+    color: $sg-green;
+}
+a {
+    text-decoration: none;
+    color: $sg-black; 
+}
+a:active {
+    cursor: grabbing;
+}
+
+@media only screen and (min-width: 600px) {
+// ========Nav Bar===============
+.link {
+    list-style: none;
+    width: 60px;
+    margin: 5px; 
+}
+.aLeft1 {
+    position: relative;
+    margin-left: 10%;
+}
+
+.aLeft2 {
+    margin: 0  10% 0 5px;
+
+ }
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 80px;
+    padding: 0;
+}
+
+.navbar {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: $sg-trueWhite;
+    
+}
+
+.logo {
+    width: 350px;
+    height: 80px;
+    margin: 30px auto 10px -50%;
+    z-index: 1;
+}
+//=========== create form in navbar==========
+.create {
+    list-style-type: none;
+    margin: -60px 50px 0 10px;
+}
+
+.createImg {
+    height: 25px;
+    width: 25px;
+    margin-top: 18px;
+}
+.createDetails{
+    position: absolute;
+    margin-right: 10px;
+    z-index: 1;
+}
+.createForm {
+    display: flex;
+    flex-wrap: wrap;
+    width: 520px;
+    margin: 5px 0;
+    
+}
+label {
+    text-align: left;
+    width: 60px;
+}
+.createDetails input{
+    width: 150px;
+    height: 15px;
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.753);
+    display: block;
+    text-align: center;
+    border: $sg-white;
+}
+.createButton {
+    height: 50px;
+    margin: 65px 20px 0 0;
+    background-color: $sg-green;
+    color: $sg-white;
+    box-shadow: 2px 2px 2px 2px rgba(94, 104, 95, 0.551);
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.createButton:active {
+    cursor: grabbing;
+  
+}
+.grid-container {
+    display: grid;
+    text-align: center;
+    width: 600px;
+    margin: 50px 0 0 -600px;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgba(16, 43, 16, 0.674);
+    border-radius: 10px;
+    
+  }
+  .grid-item {
+    color:$sg-white;
+    height: 30px;
+    padding: 2px;
+    font-size: 12px;
+    text-align: center;
+    margin: 2px;
+  }
+
+// =============Display image==========
+.homeImg {
+    width: 100vw;
+    height: 280px;
+
+}
+
+
+//=============== map=============
+
+.map {
+    float: right;
+    margin: 50px 50px 20px 0;
+    vertical-align: center;
+    width: 55%;
+    height: 55vh;
+    box-shadow: 0 0 15px 0 $sg-blue;
+
+}
+// ============location box images=================
+
+.img { 
+    width: 100% !important;
+    height: 25vh;
+    border-radius: 10px;
+}
+
+// ===========Scroll box for locatios box=======
+.scrollBox {
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 35%;
+    height: 55vh;
+    box-shadow: 0 0 15px 0 $sg-blue;
+}
+.scrollBox div {
+    width: 34vw;
+}
+// ============location box=================
+.locations {
+    display: block;
+    margin: 10px auto 50px auto;
+    height: 500px;
+    width: 46vw;
+    padding: 5px;
+    background-color:rgba(72, 109, 94, 0.441) ;
+    box-shadow: 1px 1px 5px 1px $sg-blue;
+    border-radius: 10px;
+
+}
+.slides {
+  position: relative;
+}
+.slick-dots {
+    margin-bottom: -10px;
+    
+}
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index:1;
+}
+
+.slides .slick-prev {
+  left: 2%;
+}
+
+.slides .slick-next {
+  right: 2%;
+}
+
+// ========TextBox=========
+.textbox {
+    background-color:$sg-white ;
+    text-align: center;
+    margin-top: 25px;
+    width: 46vw;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+h2 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.textbox-flex {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: 1px solid rgba(255, 255, 255, 0);
+} 
+.flex-info {
+    width: 100px;
+    margin: 5px 10px;
+    text-align: left;
+    font-size: 12px;
+}
+.description {
+    margin: 10px;
+    font-size: 10px;
+}
+.details {
+    list-style-type: none;
+    text-decoration:none;
+    background-color:rgba(8, 45, 8, 0.619);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px; 
+    position: relative;
+    z-index: 5;
+    border-radius: 10px;
+}
+input {
+    width: 15vw;
+    height: 12px;
+    margin: 2.5px;
+}
+label {
+    margin-left: 10px;
+}
+details summary::-webkit-details-marker {
+    display:none;
+  }
+details summary:focus {
+    outline: none;
+  }
+.editButton {
+    font-size: 12px;
+    width: 150px;
+    height: 25px;
+}
+.Edit {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    padding: 2px;
+}
+.editForm {
+    font-size: 12px;
+    color: $sg-white;
+    margin: 2px;
+}
+.editGrid {
+    display: grid;
+    grid-template-columns: 2px auto auto auto;
+
+}
+// =========footer========
+.footer {
+    position:fixed;
+    bottom: 0;
+    height: 80px;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    background-color: $sg-blue;    
+}
+.footer ul {
+    display: flex;
+    justify-content: space-around;
+}
+.footer li {
+    list-style: none;
+}
+
+}
