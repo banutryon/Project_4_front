@@ -1,4 +1,8 @@
-In our project, we decided to create a site focused on alternative living options. We call our site Alternative living. We included an interactive map option to be able to select any of our locations in the United States. In addition to that, you can scroll on the left to see a more detailed view of each location. 
+In our project, we decided to create a site focused on alternative living options. We call our site Alternative living. We included an interactive map option to be able to select any of our locations in the United States. In addition to that, you can scroll on the left to see a more detailed view of each location.
+The technologies used for this project was a React front end with React routers, google maps, axios for fetching data and a few other node packages for styling. THe api was built using Ruby on Rails. Both the front end are deployed on Heroku. See the links below.
+
+#### API: https://altliving.herokuapp.com/locations
+#### Front End: https://pure-stream-81491.herokuapp.com/altliving
 
 
 
