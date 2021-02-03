@@ -8,6 +8,10 @@
     background-color: yellow;
   }
 
+  details {
+    cursor: pointer;
+  }
+
   .link {
     list-style: none;
     width: 70px;
@@ -89,6 +93,8 @@
   .img {
     width: 98vw;
     height: 200px;
+    margin: 10px 5px 5px 5px;
+    border-radius: 10px;
   }
 
   .scrollBox {
@@ -98,6 +104,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    overflow-x: hidden;
     border: 2px solid red;
   }
 
@@ -105,7 +112,56 @@
     width: 98vw;
     margin: 10px 0px 10px 0px;
     display: block;
+    background-color: rgba(72, 109, 94, 0.441);
+    box-shadow: 1px 1px 5px 1px #88A5C1;
     border: solid blue;
+  }
+
+  .slides {
+    position: relative;
+  }
+
+  .slick-dots {
+    bottom: 0;
+  }
+
+  .slides .slick-prev,
+.slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+
+  .slides .slick-prev {
+    left: 2%;
+  }
+
+  .slides .slick-next {
+    right: 2%;
+  }
+
+  .textbox {
+    background-color: #eaeaea;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .textbox-flex {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+
+  .flex-info {
+    width: 60px;
+    margin: 5px 10px;
+    text-align: left;
+    font-size: 12px;
   }
 
   .Edit {
@@ -116,19 +172,8 @@
     padding: 2px;
   }
 
-  .details {
-    list-style-type: none;
-    text-decoration: none;
-    background-color: rgba(8, 45, 8, 0.619);
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    z-index: 5;
-    border-radius: 10px;
-  }
-
   input {
-    width: 150px;
+    width: 5px;
   }
 
   .footer {
