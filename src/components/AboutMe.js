@@ -7,7 +7,7 @@ export default class AboutMe extends Component {
             <>
                 <div class="about-nav">
                     <div about-navContent>
-                        <a href="https://pure-stream-81491.herokuapp.com/"><img className='about-logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
+                        <a href="https://pure-stream-81491.herokuapp.com/altliving"><img className='about-logo' src="https://lh3.googleusercontent.com/i6uumc_ebN47nE2tfJ8WEcOoi5fAwaSJrrBxlCojpKKiO2XVJhFlrglng_EaqsdTjKmWtbz0l6ibzYa8q7-EEXtOnfqTnOQqKEZqi8qTdzQfy7mhdhSLG3BkCLnQUbUI18Yqkp2sphc=w2400" alt="logo" /></a>
                     </div>
                 </div>
                 <div className="about-imgCont">
