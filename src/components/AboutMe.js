@@ -18,7 +18,7 @@ export default class AboutMe extends Component {
                         <div className="about-card-container">
                             <div className="about-card">
                                 <span className="about-card-title">About</span>
-                                <p id="about">In our project, we decided to create a site focused on optional living options. We call our site Alternative living. We included an interactive map option to be able to select any of our locations in the United States. In addition to that, you can scroll on the left to see a more detailed view of each location.</p>
+                                <p id="about">In our project, we decided to create a site focused on alternative living options. We call our site Alternative living. We included an interactive map option to be able to select any of our locations in the United States. In addition to that, you can scroll on the left to see a more detailed view of each location.</p>
                             </div>
                             <div className="about-card">
                                 <span className="about-card-title">Feedback</span>
