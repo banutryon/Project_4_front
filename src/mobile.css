@@ -5,7 +5,21 @@
   }
 
   body {
-    background-color: yellow;
+    margin: 0;
+    background-color: #eaeaea;
+    width: 100vw;
+  }
+
+  details {
+    cursor: pointer;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details summary:focus {
+    outline: none;
   }
 
   .link {
@@ -23,9 +37,11 @@
     cursor: grabbing;
   }
 
-  ul {
+  .ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .navbar {
@@ -34,7 +50,6 @@
     width: 100vw;
     height: 70px;
     background-color: #eaeaea;
-    align-items: center;
   }
 
   summary {
@@ -42,35 +57,99 @@
     width: 0;
   }
 
-  .left-link {
-    margin: 0 10px 0 0;
+  .aLeft1 {
+    margin: 0 10px 0 10px;
     height: 20px;
   }
 
-  .right-link {
+  .aLeft2 {
     margin: 0 0 0 10px;
   }
 
+  .aRight1 {
+    width: 40px;
+  }
+
   .logo {
-    margin-bottom: 15px;
+    margin: 10px auto 10px 0;
     width: 150px;
     height: 60px;
   }
 
+  .create {
+    list-style-type: none;
+    margin: -16px 30px 0 5px;
+  }
+
   .createDetails {
-    width: 150px;
+    position: absolute;
+    z-index: 1;
+    margin-right: 10px;
     margin-bottom: 20px;
+    text-decoration: none;
+  }
+
+  .createDetails input {
+    width: 80px;
+    height: 10px;
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.555);
+    display: block;
+    text-align: center;
+    border: #eaeaea;
+  }
+
+  .createButton {
+    cursor: pointer;
+    border-radius: 5px;
+    color: #eaeaea;
+    background-color: #107D3F;
+    height: 20px;
+    width: 50px;
+    margin: 40px 20px 0 0;
+    font-size: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(94, 104, 95, 0.551);
+    text-align: center;
+  }
+
+  .createButton:active {
+    cursor: grabbing;
+  }
+
+  .grid-container {
+    display: grid;
+    text-align: center;
+    width: 350px;
+    margin: 35px 0 0 -350px;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgba(25, 97, 25, 0.171);
+    border-radius: 10px;
+  }
+
+  .grid-item {
+    color: white;
+    height: 15px;
+    padding: 1px;
+    font-size: 8px;
+    margin: 2px;
   }
 
   .createImg {
-    margin-top: 65px;
-    margin-left: 60px;
+    height: 15px;
+    width: 15px;
+    margin-bottom: 20px;
   }
 
   .createForm {
-    display: grid;
-    grid-template-rows: 1fr;
-    padding: 30px 0 0 3px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 5px 0;
+  }
+
+  label {
+    text-align: left;
+    width: 60px;
   }
 
   .homeImg {
@@ -83,37 +162,92 @@
     display: block;
     margin: 10px auto 0 auto;
     width: 100vw;
-    height: 30vh;
+    height: 25vh;
+    border-radius: 10px;
   }
 
   .img {
-    width: 98vw;
+    width: 100%;
     height: 200px;
+    border-radius: 10px;
   }
 
   .scrollBox {
-    width: 98vw;
-    height: 500px;
-    margin: 10px 5px 0 5px;
+    width: 100vw;
+    height: 300px;
+    margin: 10px auto 0 auto;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    border: 2px solid red;
+    overflow-x: hidden;
+    box-shadow: 0 0 15px 0 #88A5C1;
   }
 
   .locations {
-    width: 98vw;
-    margin: 10px 0px 10px 0px;
+    width: 96%;
+    height: 500px;
+    margin: 10px auto 10px auto;
     display: block;
-    border: solid blue;
+    padding: 5px;
+    background-color: rgba(72, 109, 94, 0.441);
+    box-shadow: 1px 1px 5px 1px #88A5C1;
   }
 
-  .Edit {
-    width: 30px;
-    height: 30px;
-    display: block;
-    margin: auto;
-    padding: 2px;
+  .slides {
+    position: relative;
+  }
+
+  .slick-dots {
+    margin-bottom: -10px;
+  }
+
+  .slides .slick-prev,
+.slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+
+  .slides .slick-prev {
+    left: 2%;
+  }
+
+  .slides .slick-next {
+    right: 2%;
+  }
+
+  .textbox {
+    background-color: #eaeaea;
+    text-align: center;
+    margin-top: 25px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .textbox-flex {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+
+  .flex-info {
+    width: 60px;
+    margin: 5px 10px;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .description {
+    margin: 10px;
+    font-size: 10px;
   }
 
   .details {
@@ -121,19 +255,66 @@
     text-decoration: none;
     background-color: rgba(8, 45, 8, 0.619);
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
     position: relative;
     z-index: 5;
     border-radius: 10px;
   }
 
+  label {
+    margin-left: 10px;
+  }
+
+  .editButton {
+    font-size: 6px;
+    width: 100px;
+    height: 25px;
+    margin-top: 5px;
+  }
+
+  .Btn {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: auto !important;
+    padding: 4px;
+  }
+
+  .editForm {
+    font-size: 12px;
+    color: white;
+    margin: 2px;
+  }
+
   input {
-    width: 150px;
+    width: 45vw;
   }
 
   .footer {
-    width: 100vw;
-    padding: 0;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #88A5C1;
+  }
+
+  .footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer li {
+    list-style-type: none;
+    margin: 10px 0;
+  }
+
+  .footer p {
+    font-size: 8px;
   }
 }
 

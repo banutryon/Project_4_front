@@ -43,7 +43,7 @@ class Location extends Component {
                     </div>
                     <details className="details">
                         <summary><img 
-                        className="Edit"
+                        className="Edit Btn"
                         src="https://cdn0.iconfinder.com/data/icons/glyphpack/19/edit-512.png" 
                         alt="edit icon" /></summary>
                         <form
